@@ -1,9 +1,12 @@
+import Hero from '@/components/main/Hero'
 import Image from 'next/image'
 
 export default function Home() {
   return (
-    <main>
-      Hello World!
+    <main className='h-full w-full bg-black'>
+      <div className='flex flex-col gap-20'>
+        <Hero />
+      </div>   
     </main>
   )
 }

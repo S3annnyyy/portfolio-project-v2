@@ -5,6 +5,8 @@ import { motion } from 'framer-motion'
 import { slideInFromLeft, slideInFromRight, slideInFromTop } from '@/utils/motion'
 import Image from "next/image";
 import teckstackSVG from "../../public/techstack.svg"
+import { ArrowRightIcon } from '@heroicons/react/24/solid'
+
 
 const Hero = () => {
     return (
@@ -27,12 +29,9 @@ const Hero = () => {
                         I'm currently a Sophomore at Singapore Management University, majoring in Business Analytics & Digital Cloud Solutions
                     </motion.p>
 
-                    <motion.a variants={slideInFromLeft(1)}  className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]">
-                        View my projects 
+                    <motion.a variants={slideInFromLeft(1)} className="py-3 primary-button text-center text-black text-lg cursor-pointer max-w-[200px]">
+                        View my projects <ArrowRightIcon className='h-5 w-5 inline'/>
                     </motion.a>
-                    
-                    
-                    
                 </div>
 
                 <motion.div variants={slideInFromRight(0.8)} className="w-full h-full flex justify-center items-center">

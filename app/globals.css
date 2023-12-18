@@ -10,3 +10,15 @@
     -webkit-text-fill-color: transparent;      
 } 
  
+.primary-button {
+    background: #68e2fa;
+    font-weight: 600; 
+    border: 1px solid #68e2fa;
+    animation: fadeIn 1s 1,8s backwards;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%);   
+}
+
+.primary-button:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;    
+}

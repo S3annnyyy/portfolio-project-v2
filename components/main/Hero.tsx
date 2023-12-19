@@ -29,9 +29,9 @@ const Hero = () => {
                         I'm Sean, Year 2 Information Systems undergraduate at Singapore Management University with dual tracks in Business Analytics & Digital Cloud Solutions
                     </motion.p>
 
-                    <motion.a variants={slideInFromLeft(1)} className="py-3 primary-button text-center text-black text-lg cursor-pointer max-w-[200px]">
+                    <motion.button variants={slideInFromLeft(1)} whileHover={{ scale: 1.1 }} className="py-3 primary-button text-center text-black text-lg cursor-pointer max-w-[200px]">
                         View my projects <ArrowRightIcon className='h-5 w-5 inline'/>
-                    </motion.a>
+                    </motion.button>
                 </div>
 
                 <motion.div variants={slideInFromRight(0.8)} className="w-full h-full flex justify-center items-center">

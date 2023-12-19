@@ -1,23 +1,9 @@
 import React from 'react'
-import Image from "next/image"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinkedin, faGithub, faMedium } from '@fortawesome/free-brands-svg-icons' 
+import { Socials } from '@/constants/index'
 
 const Sidebar = () => {
-    const Socials = [
-        {
-            name: "linkedin",
-            icon: faLinkedin
-        },
-        {
-            name: "github",
-            icon: faGithub
-        },
-        {
-            name: "medium",
-            icon: faMedium
-        },
-    ]
+    
   return (
     <div className='w-15 h-screen fixed top-0 left-0 flex flex-col text-white shadow-lg'>
        

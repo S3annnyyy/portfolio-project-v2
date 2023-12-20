@@ -1,5 +1,5 @@
-import { faLinkedin, faGithub, faMedium, faTiktok } from '@fortawesome/free-brands-svg-icons' 
-import Foodpanda from '@/public/foodpanda.svg'
+import { faLinkedin, faGithub, faMedium, faTiktok, faMeta } from '@fortawesome/free-brands-svg-icons' 
+import Foodpanda from '../public/foodpanda.svg'
 
 export const Socials = [
     {
@@ -52,8 +52,8 @@ export const workExperience = [
         contentStyle: { background: '#1d1836', color: '#fff' },
         contentArrowStyle: { borderRight: '7px solid  #232631' },
         date: "Jan 2022 - July 2022",
-        iconStyle: { background: '#fff', color: '#D70F64' },
-        icon: Foodpanda
+        iconStyle: { background: '#fff', color: '#0668E1'},
+        icon: faMeta
     }
 ];
 

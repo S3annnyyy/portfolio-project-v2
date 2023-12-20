@@ -20,7 +20,7 @@ const Sidebar = () => {
 
         <motion.div variants={slideInFromLeft(0.3)}>
             {Socials.map((social) => (
-                <a href={social.link}><SideBarIcon icon={social.icon} text={social.name} /></a>                            
+                <a href={social.link} key={social.name}><SideBarIcon icon={social.icon} text={social.name} /></a>                            
             ))}
         </motion.div>               
     </motion.div>

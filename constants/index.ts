@@ -22,7 +22,7 @@ export const Socials = [
 export const workExperience = [
     {
         id: 1,
-        title: 'Risk Insights Analyst Intern',
+        title: 'Risk Analyst Intern',
         company: "Tiktok, ByteDance",
         points: [
             "Led weekly risk assessments and performed in-depth analysis on auction ads across global markets, successfully identifying and addressing risk violations and emerging trends",
@@ -39,7 +39,7 @@ export const workExperience = [
     }, 
     {
         id: 2,
-        title: 'Commercial Analyst Intern',
+        title: 'Data Analyst Intern',
         company: "Foodpanda, DeliveryHero",
         points: [
             "Adviced the commercial team in category trends and distribution gaps; drove the creation of an interactive dashboard to help with insights and analysis for category market share, basket penetration, customer penetration and product distribution dashboard(ND, PCV, ACV, SPPD)",
@@ -47,7 +47,7 @@ export const workExperience = [
             "Analyzed monthly promotions and designed a forecasting framework to help the commercial team optimize promotion strategy and supplier funding",
             "Team leader for Foodpanda's hackathon challenge (Overall champion). Proposed algorithm that segments sales of goods into selling velocity to then be further segregated to maximise picker and prep time efficiency",
             "Led recurring consultative sessions to help address business issues via dashboards using Google Datastudio & BigQuery",
-            "Performed analysis for campaigns/promotions/experiments to understand better on promotion mechanics and sales performance"
+            "Performed in-depth quantitative analysis for campaigns/promotions/experiments to understand better on promotion mechanics and sales performance"
         ],
         contentStyle: { background: '#1d1836', color: '#fff' },
         contentArrowStyle: { borderRight: '7px solid  #232631' },

@@ -3,15 +3,15 @@ import Foodpanda from '@/public/foodpanda.svg'
 
 export const Socials = [
     {
-        name: "linkedin",
+        name: "Linkedin",
         icon: faLinkedin
     },
     {
-        name: "github",
+        name: "Github",
         icon: faGithub
     },
     {
-        name: "medium",
+        name: "Medium",
         icon: faMedium
     },
 ];

@@ -17,3 +17,23 @@
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%);
     box-shadow: 0 8px 2px -2px rgb(255, 255, 255);   
 }
+
+@layer components {
+    .sidebar-icon {
+        @apply relative flex items-center justify-center 
+               h-16 w-16 mt-2 mb-2 mx-auto 
+               bg-gray-800 text-primary
+               hover:bg-primary hover:text-gray-800
+               rounded-3xl hover:rounded-xl
+               transition-all duration-300 ease-linear
+               cursor-pointer
+    }
+
+    .sidebar-tooltip {
+        @apply absolute w-auto p-2 m-2 min-w-max left-14
+               rounded-md shadow-md
+               text-white bg-gray-900
+               text-xs font-bold
+               transition-all duration-100 scale-0 origin-left  
+    }
+}

@@ -10,7 +10,7 @@ import { ArrowRightIcon } from '@heroicons/react/24/solid'
 
 const Hero = () => {
     return (
-        <div className='relative flex flex-col h-full w-full'>
+        <div className='relative flex flex-col h-full w-full z-10'>
 
             <motion.div initial="hidden" animate="visible" className="flex flex-row items-center justify-center px-20 mt-10 w-full z-[20]">      
                 <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">                    

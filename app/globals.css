@@ -62,4 +62,8 @@ body {
                text-xs font-bold
                transition-all duration-100 scale-0 origin-left  
     }
+
+    .sidebar-icon.active {
+        @apply bg-primary text-gray-800
+      }
 }

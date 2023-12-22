@@ -9,6 +9,12 @@ import { ArrowRightIcon } from '@heroicons/react/24/solid'
 
 
 const Hero = () => {
+
+    const scrollToSection = (sectionID: string) => {
+        const section = document.getElementById(sectionID)
+        if (section) {section.scrollIntoView({behavior: "smooth"})}
+    }
+
     return (
         <div className='relative flex flex-col h-full w-full z-10'>            
             <motion.div initial="hidden" animate="visible" className="flex flex-row items-center justify-center px-20 mt-10 w-full z-[20]">      
@@ -28,7 +34,7 @@ const Hero = () => {
                         I'm Sean, Year 2 Information Systems undergraduate at Singapore Management University with dual tracks in Business Analytics & Digital Cloud Solutions
                     </motion.p>
 
-                    <motion.button variants={slideInFromLeft(1)} whileHover={{ scale: 1.1 }} className="py-3 primary-button text-center text-black text-lg cursor-pointer max-w-[200px]">
+                    <motion.button onClick={() => scrollToSection('projects')} variants={slideInFromLeft(1)} whileHover={{ scale: 1.1 }} className="py-3 primary-button text-center text-black text-lg cursor-pointer max-w-[200px]">
                         View my projects <ArrowRightIcon className='h-5 w-5 inline'/>
                     </motion.button>
                 </div>

@@ -60,8 +60,13 @@ const ProjectComponent = () => {
           <ambientLight intensity={0.8} />
           <pointLight position={[10,10,50]} />
           <Laptop isOpen={isOpen}/>
-          <PerspectiveCamera makeDefault position={[0,0,20]} />
-          <OrbitControls enableZoom={false}/>
+          <PerspectiveCamera makeDefault position={[0,10,20]} />
+          <OrbitControls 
+            enableZoom={false} 
+            minAzimuthAngle={-(45 * Math.PI) / 180} // Limit horizontal rotation to -45 degrees
+            maxAzimuthAngle={(45 * Math.PI) / 180}  // Limit horizontal rotation to 45 degrees
+            maxPolarAngle={Math.PI/2} // Limit vertical rotation to not go below ground
+          />
         </Canvas>
       </div>      
     </div>

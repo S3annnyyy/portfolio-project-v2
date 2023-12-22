@@ -49,7 +49,27 @@ export function Laptop({isOpen,...props}: {isOpen:boolean, screenview:string}) {
   )
 }
 
-const ProjectComponent = (props: {screen: string}) => {
+export function Mobile({isOpen,...props}: {isOpen:boolean, screenview:string}) {
+  const { nodes, materials } = useGLTF('/models/mobile.glb')
+  const screenNode = nodes.Screen as THREE.Mesh;
+  const logo = nodes.Logo as THREE.Mesh;
+  const frame = nodes.Frame as THREE.Mesh;  
+
+  // reverse image prop to show full front 
+  const screenLoader = new THREE.TextureLoader()
+  const screen = screenLoader.load(props.screenview) // load img prop here 
+  screen.flipY = false;
+
+  return (
+    <group {...props} dispose={null} scale={3} position={[0, 1, 0]}>
+      <mesh geometry={frame.geometry} material={materials.Frame} rotation={[0, -Math.PI / 2, 0]} />
+      <mesh geometry={logo.geometry} material={materials.Logo} />
+      <mesh geometry={screenNode.geometry} material={new THREE.MeshBasicMaterial({map: screen})} rotation={[0, -Math.PI / 2, 0]} />
+    </group>
+  )
+}
+
+const ProjectComponent = (props: {screen: string, platform: string}) => {
   const [isOpen] = useState(true) 
   return (
     <div className="flex flex-col items-center">
@@ -57,7 +77,11 @@ const ProjectComponent = (props: {screen: string}) => {
         <Canvas>
           <ambientLight intensity={1} />
           <pointLight position={[10,10,50]} />
-          <Laptop isOpen={isOpen} screenview={props.screen}/>
+          {props.platform === "mobile" ? (
+            <Mobile isOpen={isOpen} screenview={props.screen}/>
+          ) : (
+            <Laptop isOpen={isOpen} screenview={props.screen}/>
+          )}
           <PerspectiveCamera makeDefault position={[0,2,20]} />
           <OrbitControls 
             enableZoom={false} 

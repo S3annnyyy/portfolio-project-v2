@@ -40,7 +40,7 @@ const Projects = () => {
             <div className="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
                 <div className="rounded-2xl text-center lg:flex lg:flex-col lg:justify-center">
                   <div className="mx-auto max-w-xs px-8">
-                    <ProjectComponent screen={project.image.src} key={project.id} />
+                    <ProjectComponent screen={project.image.src} key={project.id} platform={project.platform}/>
                   </div>
                 </div>
             </div>

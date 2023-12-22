@@ -1,5 +1,5 @@
 import { faLinkedin, faGithub, faMedium, faTiktok, faMeta } from '@fortawesome/free-brands-svg-icons' 
-import testIMG from '@/public/assets/test.png'
+import ACTProject from '@/public/assets/actProject.png'
 import SAProject from '@/public/assets/SentimentAnalysis.png'
 import StockProject from '@/public/assets/StockProject.png'
 import MaskProject from '@/public/assets/mask.gif'
@@ -67,34 +67,39 @@ export const projectData = [
         title: 'RecipeDaddy Full stack VueJs Web Application',
         description:  'A website that uses OpenAI GPT-4 model to generate recipes & help Singaporeans meal prep as part of UN Sustainable development Goal #12: Responsible Consumption',        
         urlLink: "https://github.com/S3annnyyy/IS216-RecipeDaddy",
-        image: RecipeDaddy
+        image: RecipeDaddy,
+        platform: "web"
     }, 
     {
         id: 2,
         title: '"ACT" Mobile Application',
         description:  'A productivity mobile app developed during Google Ignite Hackathon to solve UN Sustainable development Goal #12: Responsible Consumption. [2nd place]',        
         urlLink: "https://github.com/jeremychow99/google-ignite-project",
-        image: testIMG
+        image: ACTProject,
+        platform: "mobile"
     }, 
     {
         id: 3,
         title: 'Mask Detection model',
         description:  'Computer Vision model that detects people wearing/not wearing masks. Trained with 853 images using YOLOv5',       
         urlLink: "https://towardsdatascience.com/mask-detection-using-yolov5-ae40979227a6",
-        image: MaskProject
+        image: MaskProject,
+        platform: "web"
     },
     {
         id: 4,
         title: 'Correlations between Reddit and Stocks',
         description:  'Finding correlations between Reddit posts on r/wallstreetbets with company share price',       
         urlLink: "https://medium.com/analytics-vidhya/finding-correlations-between-reddit-and-the-stock-market-using-statistics-4926a25a386e",
-        image: StockProject
+        image: StockProject,
+        platform: "web"
     },
     {
         id: 5,
         title: 'Text Classification & Sentiment Analysis on r/SGExams',
         description:  'Unearthing Singaporean students sentiments by education level, using SVM, VADER Lexicons and PushShift API.',        
         urlLink: "https://towardsdatascience.com/text-classification-sentiment-analysis-on-r-sgexams-4ea341134fba",
-        image: SAProject
+        image: SAProject,
+        platform: "web"
     }
 ]

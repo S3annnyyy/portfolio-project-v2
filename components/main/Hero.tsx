@@ -10,8 +10,7 @@ import { ArrowRightIcon } from '@heroicons/react/24/solid'
 
 const Hero = () => {
     return (
-        <div className='relative flex flex-col h-full w-full z-10'>
-
+        <div className='relative flex flex-col h-full w-full z-10'>            
             <motion.div initial="hidden" animate="visible" className="flex flex-row items-center justify-center px-20 mt-10 w-full z-[20]">      
                 <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">                    
                     <motion.div variants={slideInFromTop} className="flex flex-col gap-6 mt-6 text-6xl font-bold text-white max-w-[600px] w-auto h-auto">

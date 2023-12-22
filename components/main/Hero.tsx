@@ -31,7 +31,7 @@ const Hero = () => {
                     </motion.div>
 
                     <motion.p variants={slideInFromLeft(0.8)} className="text-lg text-gray-400 my-5 max-w-[600px]">
-                        I'm Sean, Year 2 Information Systems undergraduate at Singapore Management University with dual tracks in Business Analytics & Digital Cloud Solutions
+                        I&apos;m Sean, Year 2 Information Systems undergraduate at Singapore Management University with dual tracks in Business Analytics & Digital Cloud Solutions
                     </motion.p>
 
                     <motion.button onClick={() => scrollToSection('projects')} variants={slideInFromLeft(1)} whileHover={{ scale: 1.1 }} className="py-3 primary-button text-center text-black text-lg cursor-pointer max-w-[200px]">

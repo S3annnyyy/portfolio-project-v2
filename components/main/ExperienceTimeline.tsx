@@ -13,8 +13,11 @@ const ExperienceTimeline = () => {
     <div className='relative flex flex-col h-full w-full z-10'>
         <motion.div initial="hidden" animate="visible" className="flex flex-row items-center justify-center px-20 mt-10 w-full z-[20]">      
                 <div>                    
-                    <motion.div variants={slideInFromTop} className="text-6xl text-white w-auto h-auto">
-                        Work Experience
+                    <motion.div variants={slideInFromTop} className="mx-auto max-w-2xl sm:text-center">
+                   
+                        <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Work Experience </h2>
+                        <p className="text-lg leading-8 text-gray-600">What I have done so far</p>              
+                    
                     </motion.div>
                 </div>
         </motion.div>

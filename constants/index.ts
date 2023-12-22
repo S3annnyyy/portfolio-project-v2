@@ -72,7 +72,7 @@ export const projectData = [
     }, 
     {
         id: 2,
-        title: '"ACT" Mobile Application',
+        title: '"ACT" Flutter Mobile Application',
         description:  'A productivity mobile app developed during Google Ignite Hackathon to solve UN Sustainable development Goal #12: Responsible Consumption. [2nd place]',        
         urlLink: "https://github.com/jeremychow99/google-ignite-project",
         image: ACTProject,

@@ -3,6 +3,7 @@
 import React from 'react'
 import { workExperience } from '@/constants/index'
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component'
+import { slideInFromLeft, slideInFromRight, slideInFromTop } from '@/utils/motion'
 import 'react-vertical-timeline-component/style.min.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { motion } from 'framer-motion'
@@ -10,7 +11,15 @@ import { motion } from 'framer-motion'
 const ExperienceTimeline = () => {
   return (
     <div className='relative flex flex-col h-full w-full z-10'>
+        <motion.div initial="hidden" animate="visible" className="flex flex-row items-center justify-center px-20 mt-10 w-full z-[20]">      
+                <div>                    
+                    <motion.div variants={slideInFromTop} className="text-6xl text-white w-auto h-auto">
+                        Work Experience
+                    </motion.div>
+                </div>
+        </motion.div>
         <div className="flex flex-row items-center justify-center px-20 mt-10 w-full z-10">
+        
         <VerticalTimeline>
                     {
                     workExperience.map(element => {

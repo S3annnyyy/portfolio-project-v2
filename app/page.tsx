@@ -5,7 +5,7 @@ import Projects from '@/components/main/Projects'
  
 export default function Home() {
   return (
-    <main className='h-full w-full bg-black'>
+    <main className='h-full w-full bg-black overflow-hidden'>
       <div className='flex flex-col gap-20'>
         <div id='home'><Hero /></div>
         <div id='experience'><ExperienceTimeline /></div>

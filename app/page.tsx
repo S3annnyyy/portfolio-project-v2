@@ -2,7 +2,7 @@ import ExperienceTimeline from '@/components/main/ExperienceTimeline'
 import Footer from '@/components/main/Footer'
 import Hero from '@/components/main/Hero'
 import ProjectComponent from '@/components/sub/ProjectComponent'
-import Image from 'next/image'
+import testIMG from '@/public/assets/test.png' 
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
       <div className='flex flex-col gap-20'>
         <Hero />
         <ExperienceTimeline />
-        <ProjectComponent />
+        <ProjectComponent screen={testIMG.src}/>
         <Footer />
       </div>   
     </main>

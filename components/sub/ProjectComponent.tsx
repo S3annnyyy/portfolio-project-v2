@@ -5,11 +5,9 @@ import { useState } from "react"
 import { Canvas } from '@react-three/fiber'
 import { useGLTF, PerspectiveCamera, OrbitControls } from '@react-three/drei'
 import { motion } from 'framer-motion-3d'
-import { useMotionValue, useTransform } from 'framer-motion'
 import * as THREE from 'three'
-import testIMG from '@/public/assets/test.png' 
 
-export function Laptop({isOpen,...props}: {isOpen:boolean}) {
+export function Laptop({isOpen,...props}: {isOpen:boolean, screenview:string}) {
   const { nodes, materials } = useGLTF('/models/laptop.glb')
   const screenNode = nodes.Screen as THREE.Mesh;
   const blackInsetNode = nodes.Black_Inset as THREE.Mesh;
@@ -29,7 +27,7 @@ export function Laptop({isOpen,...props}: {isOpen:boolean}) {
 
   // reverse image prop to show full front 
   const screenLoader = new THREE.TextureLoader()
-  const screen = screenLoader.load(testIMG.src) // load img prop here 
+  const screen = screenLoader.load(props.screenview) // load img prop here 
   screen.flipY = false;
 
   return (
@@ -51,7 +49,7 @@ export function Laptop({isOpen,...props}: {isOpen:boolean}) {
   )
 }
 
-const ProjectComponent = () => {
+const ProjectComponent = (props: {screen: string}) => {
   const [isOpen] = useState(true)
   return (
     <div className="flex flex-col items-center">
@@ -59,7 +57,7 @@ const ProjectComponent = () => {
         <Canvas>
           <ambientLight intensity={0.8} />
           <pointLight position={[10,10,50]} />
-          <Laptop isOpen={isOpen}/>
+          <Laptop isOpen={isOpen} screenview={props.screen}/>
           <PerspectiveCamera makeDefault position={[0,10,20]} />
           <OrbitControls 
             enableZoom={false} 

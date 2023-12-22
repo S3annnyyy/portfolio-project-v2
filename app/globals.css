@@ -4,22 +4,22 @@
 
 @font-face {
     font-family: "Helvetica Neue";
-    src: url('../public/helvetica-neu.ttf') format('ttf');
+    src: url('../public/fonts/helvetica-neu.ttf').format('ttf');
 }  
   
 @font-face {
     font-family: "La Belle Aurore";
-    src: url('../public/LaBelleAurore.woff2') format('woff2');
+    src: url('../public/fonts/LaBelleAurore.woff2').format('woff2');
 }
 
 @font-face {
     font-family: "Coolvetica";
-    src: url('../public/CoolveticaRg-Regular.woff2') format('woff2');
+    src: url('../public/fonts/CoolveticaRg-Regular.woff2').format('woff2');
 }
 
 @font-face {
     font-family: "Gotham Book";
-    src: url('../public/gotham-book.woff2') format('woff2');
+    src: url('../public/fonts/gotham-book.woff2').format('woff2');
 }
 
 body {

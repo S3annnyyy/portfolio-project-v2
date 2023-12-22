@@ -5,11 +5,12 @@ import { useState } from "react"
 import { Canvas } from '@react-three/fiber'
 import { useGLTF, PerspectiveCamera, OrbitControls } from '@react-three/drei'
 import { motion } from 'framer-motion-3d'
+import { useMotionValue, useTransform } from 'framer-motion'
 import * as THREE from 'three'
-import testIMG from '@/public/test.png' 
+import testIMG from '@/public/assets/test.png' 
 
 export function Laptop({isOpen,...props}: {isOpen:boolean}) {
-  const { nodes, materials } = useGLTF('/laptop.glb')
+  const { nodes, materials } = useGLTF('/models/laptop.glb')
   const screenNode = nodes.Screen as THREE.Mesh;
   const blackInsetNode = nodes.Black_Inset as THREE.Mesh;
   const rubberNode = nodes.Rubber as THREE.Mesh;
@@ -49,6 +50,7 @@ export function Laptop({isOpen,...props}: {isOpen:boolean}) {
     </group>
   )
 }
+
 const ProjectComponent = () => {
   const [isOpen] = useState(true)
   return (

@@ -31,7 +31,7 @@ export function Laptop({isOpen,...props}: {isOpen:boolean, screenview:string}) {
   screen.flipY = false;
 
   return (
-    <group {...props} dispose={null} position={[-0.03, -1, 0]}>
+    <group {...props} dispose={null} position={[1, -1, 0]}>
       <group rotation={[-Math.PI / 2, 0, 0]} scale={0.04} >
         <motion.group position={[-0.03, 111.69, 2.84]} scale={3.37} initial={"closed"} animate={"open"} transition={{delay:0.5, duration:1}} variants={variants} >
           <mesh geometry={screenNode.geometry}  material={new THREE.MeshBasicMaterial({map: screen})} position={[0.01, -33.13, -0.84]} scale={0.3} /> 

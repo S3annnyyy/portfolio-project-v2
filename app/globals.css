@@ -87,3 +87,17 @@ body {
         @apply bg-primary text-gray-800
       }
 }
+
+.divider {
+    width: 30%;
+    height: 3rem;
+    background-color: #68e2fa;
+    clip-path: polygon(
+            50% 0%, 
+            100% 0, 
+            100% 5%,  
+            50% 5%, 
+            40% 35%, 
+            5% 35%, 
+            0 0);    
+}

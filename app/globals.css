@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+  /* custom scroll-bar */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #fff;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #808080;
+    border-radius: 1.625rem;
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box
+  }
+
 @font-face {
     font-family: "Helvetica Neue";
     src: url('../public/fonts/helvetica-neu.ttf').format('ttf');
@@ -42,6 +58,10 @@ body {
     animation: fadeIn 1s 1,8s backwards;
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%);
     box-shadow: 0 8px 2px -2px rgb(255, 255, 255);   
+}
+
+.project-header {
+    clip-path: polygon(0 -1px,100% -1px,calc(100% - 10px) 100%,10px 100%);    
 }
 
 @layer components {

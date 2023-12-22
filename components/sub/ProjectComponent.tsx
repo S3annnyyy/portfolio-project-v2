@@ -32,7 +32,7 @@ export function Laptop({isOpen,...props}: {isOpen:boolean, screenview:string}) {
 
   return (
     <group {...props} dispose={null} position={[-0.03, -1, 0]}>
-      <group rotation={[-Math.PI / 2, 0, 0]} scale={0.03} >
+      <group rotation={[-Math.PI / 2, 0, 0]} scale={0.04} >
         <motion.group position={[-0.03, 111.69, 2.84]} scale={3.37} initial={"closed"} animate={"open"} transition={{delay:0.5, duration:1}} variants={variants} >
           <mesh geometry={screenNode.geometry}  material={new THREE.MeshBasicMaterial({map: screen})} position={[0.01, -33.13, -0.84]} scale={0.3} /> 
           <mesh geometry={blackInsetNode.geometry} material={materials['Display Rim 1']} position={[0.01, -33.13, -0.84]} scale={0.3} />
@@ -50,12 +50,12 @@ export function Laptop({isOpen,...props}: {isOpen:boolean, screenview:string}) {
 }
 
 const ProjectComponent = (props: {screen: string}) => {
-  const [isOpen] = useState(true)
+  const [isOpen] = useState(true) 
   return (
     <div className="flex flex-col items-center">
       <div className="h-screen w-screen z-10">
         <Canvas>
-          <ambientLight intensity={0.8} />
+          <ambientLight intensity={1} />
           <pointLight position={[10,10,50]} />
           <Laptop isOpen={isOpen} screenview={props.screen}/>
           <PerspectiveCamera makeDefault position={[0,2,20]} />

@@ -1,6 +1,9 @@
 import { faLinkedin, faGithub, faMedium, faTiktok, faMeta } from '@fortawesome/free-brands-svg-icons' 
-import Foodpanda from '../public/foodpanda.svg'
 import testIMG from '@/public/assets/test.png'
+import SAProject from '@/public/assets/SentimentAnalysis.png'
+import StockProject from '@/public/assets/StockProject.png'
+import MaskProject from '@/public/assets/mask.gif'
+import RecipeDaddy from '@/public/assets/recipedaddy2.png'
 
 export const Socials = [
     {
@@ -61,30 +64,37 @@ export const workExperience = [
 export const projectData = [
     {
         id: 1,
+        title: 'RecipeDaddy Full stack VueJs Web Application',
+        description:  'A website that uses OpenAI GPT-4 model to generate recipes & help Singaporeans meal prep as part of UN Sustainable development Goal #12: Responsible Consumption',        
+        urlLink: "https://github.com/S3annnyyy/IS216-RecipeDaddy",
+        image: RecipeDaddy
+    }, 
+    {
+        id: 2,
         title: '"ACT" Mobile Application',
         description:  'A productivity mobile app developed during Google Ignite Hackathon to solve UN Sustainable development Goal #12: Responsible Consumption. [2nd place]',        
         urlLink: "https://github.com/jeremychow99/google-ignite-project",
         image: testIMG
     }, 
     {
-        id: 2,
+        id: 3,
         title: 'Mask Detection model',
         description:  'Computer Vision model that detects people wearing/not wearing masks. Trained with 853 images using YOLOv5',       
         urlLink: "https://towardsdatascience.com/mask-detection-using-yolov5-ae40979227a6",
-        image: testIMG
-    },
-    {
-        id: 3,
-        title: 'Correlations between Reddit and Stocks',
-        description:  'Finding correlations between Reddit posts on r/wallstreetbets with company share price',       
-        urlLink: "https://medium.com/analytics-vidhya/finding-correlations-between-reddit-and-the-stock-market-using-statistics-4926a25a386e",
-        image: testIMG
+        image: MaskProject
     },
     {
         id: 4,
+        title: 'Correlations between Reddit and Stocks',
+        description:  'Finding correlations between Reddit posts on r/wallstreetbets with company share price',       
+        urlLink: "https://medium.com/analytics-vidhya/finding-correlations-between-reddit-and-the-stock-market-using-statistics-4926a25a386e",
+        image: StockProject
+    },
+    {
+        id: 5,
         title: 'Text Classification & Sentiment Analysis on r/SGExams',
         description:  'Unearthing Singaporean students sentiments by education level, using SVM, VADER Lexicons and PushShift API.',        
         urlLink: "https://towardsdatascience.com/text-classification-sentiment-analysis-on-r-sgexams-4ea341134fba",
-        image: testIMG
+        image: SAProject
     }
 ]

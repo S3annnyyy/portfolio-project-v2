@@ -13,9 +13,9 @@ const Sidebar = () => {
     <motion.div initial="hidden" animate="visible" className='w-15 h-screen fixed top-0 left-0 flex flex-col justify-between text-white shadow-lg z-50'>
        
         <motion.div variants={slideInFromLeft(0.3)}>
-            <a href="#home"><SideBarIcon icon={faHome} text="Home"/></a>        
-            <a href="#projects"><SideBarIcon icon={faCode} text="Projects"/></a>
+            <a href="#home"><SideBarIcon icon={faHome} text="Home"/></a>       
             <a href="#experience"><SideBarIcon icon={faUser} text="Experience"/></a>
+            <a href="#projects"><SideBarIcon icon={faCode} text="Projects"/></a>
         </motion.div>
 
         <motion.div variants={slideInFromLeft(0.3)}>

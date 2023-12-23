@@ -8,7 +8,7 @@ import { motion } from 'framer-motion-3d'
 import * as THREE from 'three'
 
 export function Laptop({isOpen,...props}: {isOpen:boolean, screenview:string}) {
-  const { nodes, materials } = useGLTF('/models/laptop.glb')
+  const { nodes, materials } = useGLTF('./models/laptop.glb')
   const screenNode = nodes.Screen as THREE.Mesh;
   const blackInsetNode = nodes.Black_Inset as THREE.Mesh;
   const rubberNode = nodes.Rubber as THREE.Mesh;
@@ -50,7 +50,7 @@ export function Laptop({isOpen,...props}: {isOpen:boolean, screenview:string}) {
 }
 
 export function Mobile({isOpen,...props}: {isOpen:boolean, screenview:string}) {
-  const { nodes, materials } = useGLTF('/models/mobile.glb')
+  const { nodes, materials } = useGLTF('./models/mobile.glb')
   const screenNode = nodes.Screen as THREE.Mesh;
   const logo = nodes.Logo as THREE.Mesh;
   const frame = nodes.Frame as THREE.Mesh;  

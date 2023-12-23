@@ -40,7 +40,7 @@ const Sidebar = () => {
             <motion.div
                 initial="hidden" 
                 animate="visible"
-                exit="exit"
+                // exit="exit"
                 variants={slideInFromLeft(0.1)}                 
                 className={visible ? 'invisible' : ''}
                 key={visible ? 'visible' : 'hidden'} // forces react to remount component when value changes -> trigger motion                           

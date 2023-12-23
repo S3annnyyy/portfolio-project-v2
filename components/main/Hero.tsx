@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import { slideInFromLeft, slideInFromRight, slideInFromTop } from '@/utils/motion'
 import Image from "next/image";
 import teckstackSVG from "../../public/assets/techstack.svg"
+import portrait from "../../public/assets/portrait.jpg"
 import { ArrowRightIcon } from '@heroicons/react/24/solid'
 
 

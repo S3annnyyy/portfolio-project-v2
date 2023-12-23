@@ -1,11 +1,10 @@
 "use client"
 
 import React from 'react'
-import { motion } from 'framer-motion'
+import { motion, useMotionValue, useTransform } from 'framer-motion'
 import { slideInFromLeft, slideInFromRight, slideInFromTop } from '@/utils/motion'
 import Image from "next/image";
 import teckstackSVG from "../../public/assets/techstack.svg"
-import portrait from "../../public/assets/portrait.jpg"
 import { ArrowRightIcon } from '@heroicons/react/24/solid'
 
 
@@ -16,9 +15,28 @@ const Hero = () => {
         if (section) {section.scrollIntoView({behavior: "smooth"})}
     }
 
+    const x = useMotionValue(200);
+    const y = useMotionValue(200);
+    const limit = 35
+
+    const rotateX = useTransform(y, [0, 400], [limit, -limit]);
+    const rotateY = useTransform(x, [0, 400], [-limit, limit]);
+
+    function handleMouse(event:any) {
+        const rect = event.currentTarget.getBoundingClientRect();
+
+        x.set(event.clientX - rect.left);
+        y.set(event.clientY - rect.top);
+    }
+
     return (
         <div className='relative flex flex-col h-full w-full z-10'>            
-            <motion.div initial="hidden" animate="visible" className="flex flex-row items-center justify-center px-20 mt-10 w-full z-[20]">      
+            <motion.div 
+                initial="hidden" 
+                animate="visible" 
+                className="flex flex-row items-center justify-center px-20 mt-10 w-full z-[20]"
+                onMouseMove={handleMouse}
+            >      
                 <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">                    
                     <motion.div variants={slideInFromTop} className="flex flex-col gap-6 mt-6 text-6xl font-bold text-white max-w-[600px] w-auto h-auto">
                         Hi there!
@@ -40,7 +58,11 @@ const Hero = () => {
                     </motion.button>
                 </div>
 
-                <motion.div variants={slideInFromRight(0.8)} className="w-full h-full flex justify-center items-center">
+                <motion.div 
+                    variants={slideInFromRight(0.8)} 
+                    className="w-full h-full flex justify-center items-center"
+                    style={{rotateX, rotateY}}
+                >
                     <Image src={teckstackSVG} alt="work icons"  height={650} width={650} />
                 </motion.div>
             </motion.div>

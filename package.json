@@ -1,4 +1,6 @@
 {
+  "homepage": "http://seanyckang.com",
+  "proxy": "http://localhost:3000",
   "name": "portfolio-project-v2",
   "version": "0.1.0",
   "private": true,

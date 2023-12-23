@@ -35,7 +35,7 @@ export const workExperience = [
             "Conducted post-opening of Forex market assessment, combining a risk assessment matrix and detailed case deep-dives, to thoroughly evaluate the impact of the Forex market on SEA markets. Delivered valuable insights and recommendations regarding the safety and viability of Forex within these markets",
             "Created audio to text translator using OpenAI speech recognition model"
         ],
-        contentStyle: { background: '#1d1836', color: '#fff' },
+        contentStyle: { background: '#1f2937', color: '#fff' },
         contentArrowStyle: { borderRight: '7px solid  #232631' },
         date: "May 2023 - present",
         iconStyle: { background: '#1d1836', color: '#fff' },
@@ -53,7 +53,7 @@ export const workExperience = [
             "Led recurring consultative sessions to help address business issues via dashboards using Google Datastudio & BigQuery",
             "Performed in-depth quantitative analysis for campaigns/promotions/experiments to understand better on promotion mechanics and sales performance"
         ],
-        contentStyle: { background: '#1d1836', color: '#fff' },
+        contentStyle: { background: '#1f2937', color: '#fff' },
         contentArrowStyle: { borderRight: '7px solid  #232631' },
         date: "Jan 2022 - July 2022",
         iconStyle: { background: '#fff', color: '#0668E1'},

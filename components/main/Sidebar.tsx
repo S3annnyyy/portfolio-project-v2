@@ -1,11 +1,11 @@
 "use client"
 
 import React, { useState } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Socials } from '@/constants/index'
 import { faHome, faUser, faCode } from '@fortawesome/free-solid-svg-icons' 
 import { motion } from 'framer-motion'
 import { slideInFromLeft } from '@/utils/motion'
+import SideBarIcon from '@/components/sub/SideBarIcon'
 
 const Sidebar = () => {
   const [activeSection, setActiveSection] = useState<string>('home'); // set home be default active when activated  
@@ -30,31 +30,11 @@ const Sidebar = () => {
             <a onClick={() => scrollToSection('projects')}>
                 <SideBarIcon icon={faCode} text="Projects" isActive={activeSection === 'projects'} />
             </a>
-        </motion.div>
-
-        <motion.div variants={slideInFromLeft(0.3)}>
-            {Socials.map((social) => (
-                <a href={social.link} key={social.name}><SideBarIcon icon={social.icon} text={social.name} /></a>                            
-            ))}
-        </motion.div>               
+        </motion.div>            
     </motion.div>
   )
 }
 
-const SideBarIcon = ({ icon, text='tooltip', w=24, h=24, isActive=false} : {icon:any, text?:string, w?:number, h?:number, isActive?:boolean}) => {
-    return (
-        <div className={`sidebar-icon group ${isActive ? 'active' : ''}`}>
-            <FontAwesomeIcon
-                icon={icon}
-                width={w}
-                height={h}
-            />
 
-            <span className='sidebar-tooltip group-hover:scale-100'>
-                {text}
-            </span>
-        </div>
-    )    
-}
 
 export default Sidebar

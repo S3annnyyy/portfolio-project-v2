@@ -32,9 +32,9 @@ const ProjectItem = ({ project }: {project: Project}) => {
       animate={inView ? 'visible' : 'hidden'}
       variants={project.id % 2 === 0 ? slideInFromRight(0.8) : slideInFromLeft(0.8)}
     >
-      <div className="relative isolate px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
+      <div className="relative isolate px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0 z-[20]">
       <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
-              <div className='flex item-center'>
+              <div className='flex item-center ml-10 md:ml-0'>
                 <div className='divider mt-2'></div>
                 <span className='absolute text-primary ml-36 m:ml-32 lg:ml-28 mb-6'>{"0" +project.id}</span>   
               </div>

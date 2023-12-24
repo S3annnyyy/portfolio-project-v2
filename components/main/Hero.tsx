@@ -2,13 +2,10 @@
 
 import React from 'react'
 import { motion, useMotionValue, useTransform } from 'framer-motion'
-import { slideInFromLeft, slideInFromRight, slideInFromTop } from '@/utils/motion'
-import Image from "next/image";
+import { slideInFromLeft, slideInFromRight } from '@/utils/motion'
 import teckstackSVG from "../../public/assets/techstack.svg"
 import { ArrowRightIcon } from '@heroicons/react/24/solid'
 import TextDecrypt from '@/utils/TextDecrypt'
-import StarsCanvas from './StarsBackground';
-import HaloCanvas from './HaloBackground';
 
 
 const Hero = () => {
@@ -33,17 +30,19 @@ const Hero = () => {
     }
 
     return (
-        <div className='relative flex flex-col grid grid-cols-1 md:grid-cols-2 h-screen w-screen gap-1 z-10'>
+        <div className='relative flex flex-col grid grid-cols-1 md:grid-cols-2 h-screen w-screen gap-1 z-10 align-middle'>
            <motion.div 
                 initial="hidden" 
                 animate="visible" 
-                className="flex flex-row items-center justify-center px-20 z-[20]"                
+                className="flex flex-row items-center justify-center ml-16 z-[20]"                
             >      
                 <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">                    
                     <motion.div 
                         variants={slideInFromLeft(0.5)} 
                         className="flex flex-col mt-6 max-w-[600px] w-auto h-auto">
-                        <p className='text-base md:text-2xl text-textBody font-primary tracking-[0.4rem]'>SEAN YAP CHENG KANG</p>
+                        <div className='text-base md:text-2xl text-textBody font-primary tracking-[0.4rem] whitespace-nowrap'>
+                            <TextDecrypt text="SEAN YAP CHENG KANG" />
+                        </div>
                     </motion.div>
 
                     <motion.div variants={slideInFromLeft(0.5)} className="flex flex-col mt-6 max-w-[1000px] w-screen">               

@@ -23,11 +23,11 @@ const ProjectItem = ({ project }: {project: Project}) => {
     triggerOnce: true, // Trigger the event only once
   });
 
-  return (
+  return (    
     <motion.div
       key={project.id}
       ref={ref}
-      className="mx-auto max-w-7xl py-6 sm:px-6 sm:py-6 lg:px-8"
+      className="mx-auto max-w-7xl py-6 sm:px-6 sm:py-6 lg:px-8"      
       initial="hidden"
       animate={inView ? 'visible' : 'hidden'}
       variants={project.id % 2 === 0 ? slideInFromRight(0.8) : slideInFromLeft(0.8)}
@@ -49,12 +49,8 @@ const ProjectItem = ({ project }: {project: Project}) => {
                 </a>
               </div>
             </div>
-            <div className="p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
-                <div className="rounded-2xl text-center lg:flex lg:flex-col lg:justify-center">
-                  <div className="max-w-fit">
-                    <ProjectComponent screen={project.image.src} key={project.id} platform={project.platform}/>
-                  </div>
-                </div>
+            <div className="mt-10 w-full max-w-md flex-shrink-0">
+              <ProjectComponent screen={project.image.src} key={project.id} platform={project.platform}/>
             </div>
       </div>
     </motion.div>
@@ -63,14 +59,14 @@ const ProjectItem = ({ project }: {project: Project}) => {
 
 const Projects = () => {
   return (
-    <div className="relative flex flex-col h-full w-full z-10">
+    <div className="h-full w-full z-10">
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Projects</h2>
         <p className="text-lg leading-8 text-gray-600">Interesting projects I did over the years</p>
       </div>
-      {projectData.map((project) => (
-        <ProjectItem key={project.id} project={project} />
-      ))}
+      {projectData.map((project) => (<ProjectItem key={project.id} project={project} />))}
+        
+     
     </div>
   );
 };

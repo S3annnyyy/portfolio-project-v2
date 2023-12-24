@@ -14,19 +14,22 @@ const ProjectComponent = (props: {screen: string, platform: string}) => {
         <Canvas>
           <ambientLight intensity={1} />
           <pointLight position={[10,10,50]} />
-          {props.platform === "mobile" ? (
-            <Mobile isOpen={isOpen} screenview={props.screen}/>
-          ) : (
-            <Laptop isOpen={isOpen} screenview={props.screen}/>
-          )}
-          <PerspectiveCamera makeDefault position={[0,2,20]} />
-          <OrbitControls 
-            enableZoom={false} 
-            minAzimuthAngle={-(10 * Math.PI) / 180} // Limit horizontal rotation to -45 degrees
-            maxAzimuthAngle={(10 * Math.PI) / 180}  // Limit horizontal rotation to 45 degrees
-            maxPolarAngle={Math.PI/2} // Limit vertical rotation to not go below ground            
-            rotateSpeed={0.2}
-          />
+          <mesh>           
+            <meshStandardMaterial />
+            {props.platform === "mobile" ? (
+              <Mobile isOpen={isOpen} screenview={props.screen}/>
+            ) : (
+              <Laptop isOpen={isOpen} screenview={props.screen}/>
+            )}
+            <PerspectiveCamera makeDefault position={[0,2,20]} />
+            <OrbitControls 
+              enableZoom={false} 
+              minAzimuthAngle={-(10 * Math.PI) / 180} // Limit horizontal rotation to -45 degrees
+              maxAzimuthAngle={(10 * Math.PI) / 180}  // Limit horizontal rotation to 45 degrees
+              maxPolarAngle={Math.PI/2} // Limit vertical rotation to not go below ground            
+              rotateSpeed={0.2}
+            />            
+           </mesh>
         </Canvas>
       </div>      
     </div>

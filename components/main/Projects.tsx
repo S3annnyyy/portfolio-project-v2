@@ -34,9 +34,9 @@ const ProjectItem = ({ project }: {project: Project}) => {
     >
       <div className="relative isolate px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0 z-[20]">
       <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
-              <div className='flex item-center ml-10 md:ml-0'>
+              <div className='flex flex-row item-center ml-10 md:ml-0'>
                 <div className='divider mt-2'></div>
-                <span className='absolute text-primary ml-36 m:ml-32 lg:ml-28 mb-6'>{"0" +project.id}</span>   
+                <span className='text-primary ml-10 mb-6'>{"0" +project.id}</span>   
               </div>
                       
               <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -49,9 +49,9 @@ const ProjectItem = ({ project }: {project: Project}) => {
                 </a>
               </div>
             </div>
-            <div className="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
+            <div className="p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
                 <div className="rounded-2xl text-center lg:flex lg:flex-col lg:justify-center">
-                  <div className="mx-auto max-w-xs px-8">
+                  <div className="max-w-fit">
                     <ProjectComponent screen={project.image.src} key={project.id} platform={project.platform}/>
                   </div>
                 </div>

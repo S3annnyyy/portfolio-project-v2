@@ -81,7 +81,7 @@ const Hero = () => {
                     // onMouseMove={handleMouse}
                 >
                     {/* <Image src={teckstackSVG} alt="work icons"  height={650} width={650} />         */}
-                    <HaloCanvas />                                
+                    {/* <HaloCanvas />                                 */}
             </motion.div>
         </div>        
     )

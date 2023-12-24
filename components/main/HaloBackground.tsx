@@ -7,8 +7,6 @@ import * as THREE from "three";
 const HaloBackground = (props:any) => {
   const [vantaEffect, setVantaEffect] = useState<any>(0);
   const vantaRef = useRef<HTMLDivElement>(null);
-  let haloSize = window.innerWidth > 430 ? 4.0 : 1.2;
-  let offSet = window.innerWidth > 430 ? 0.35 : -0.1;
   
    useEffect(() => {
        if (!vantaEffect) {
@@ -26,7 +24,7 @@ const HaloBackground = (props:any) => {
              color1: "#ff0000",
              color2: "#00ff00",
              size: 1,
-             xOffset: -0.3,
+             xOffset: 0.3,
              yOffset: 0.1,
              backgroundColor: "#181818",
              amplitudeFactor: 1,
@@ -36,7 +34,7 @@ const HaloBackground = (props:any) => {
        return () => {
          if (vantaEffect) vantaEffect.destroy();
        };
-     }, [vantaEffect, offSet, haloSize]);
+     }, [vantaEffect]);
   
   return (
       <div ref={vantaRef} className='halo-background'></div>
@@ -44,7 +42,7 @@ const HaloBackground = (props:any) => {
 }
 
 const HaloCanvas = () => (
-    <div>
+    <div className='lg:block hidden'>
         <HaloBackground />
     </div>
 )

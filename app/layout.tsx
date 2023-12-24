@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Sidebar from '@/components/main/Sidebar'
 import StarsCanvas from '@/components/main/StarsBackground'
+import HaloCanvas from '@/components/main/HaloBackground'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,7 +20,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>        
-        <Sidebar />                
+        <Sidebar /> 
+        <HaloCanvas />               
         {children}        
       </body>
     </html>

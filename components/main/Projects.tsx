@@ -44,7 +44,7 @@ const ProjectItem = ({ project }: {project: Project}) => {
               </h2>            
               <p className="mt-6 text-lg leading-8 text-gray-300">{project.description}</p>             
               <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">              
-                <a href={project.urlLink} className="text-sm font-semibold leading-6 text-primary z-[20]">
+                <a href={project.urlLink} className="text-xl font-semibold leading-6 text-primary z-[20]">
                   View Project <span aria-hidden="true">→</span>
                 </a>
               </div>

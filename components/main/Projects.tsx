@@ -39,7 +39,9 @@ const ProjectItem = ({ project }: {project: Project}) => {
                 <span className='absolute text-primary ml-36 m:ml-32 lg:ml-28 mb-6'>{"0" +project.id}</span>   
               </div>
                       
-              <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">{project.title}</h2>            
+              <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                {project.title}
+              </h2>            
               <p className="mt-6 text-lg leading-8 text-gray-300">{project.description}</p>             
               <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">              
                 <a href={project.urlLink} className="text-sm font-semibold leading-6 text-primary z-[20]">

@@ -6,6 +6,7 @@ import { slideInFromLeft, slideInFromRight, slideInFromTop } from '@/utils/motio
 import Image from "next/image";
 import teckstackSVG from "../../public/assets/techstack.svg"
 import { ArrowRightIcon } from '@heroicons/react/24/solid'
+import TextDecrypt from '@/components/sub/TextDecrypt'
 
 
 const Hero = () => {
@@ -34,7 +35,7 @@ const Hero = () => {
         //     <div className='text-white'>Hello</div>
         //     <div className='text-white'>World</div>
         // </div>
-        <div className='relative flex flex-col h-full w-full z-10'>            
+        <div className='relative flex flex-col h-screen w-screen z-10'>            
             <motion.div 
                 initial="hidden" 
                 animate="visible" 

@@ -21,7 +21,8 @@ export default function RootLayout({
       <body className={inter.className}>        
         <Sidebar />                
         {children}
-        <StarsCanvas />
+        {/* <StarsCanvas />         */}
+        {/* <DisplacementSphere /> */}
       </body>
     </html>
   )

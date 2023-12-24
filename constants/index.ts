@@ -1,5 +1,5 @@
 import { faLinkedin, faGithub, faMedium, faTiktok, faMeta } from '@fortawesome/free-brands-svg-icons' 
-import ACTProject from '@/public/assets/actProject.png'
+import ACTProject from '@/public/assets/actProject2.png'
 import SAProject from '@/public/assets/SentimentAnalysis.png'
 import StockProject from '@/public/assets/StockProject.png'
 import MaskProject from '@/public/assets/mask.gif'

@@ -30,6 +30,10 @@ const Hero = () => {
     }
 
     return (
+        // <div className='grid grid-cols-2 gap-1 bg-blue'>
+        //     <div className='text-white'>Hello</div>
+        //     <div className='text-white'>World</div>
+        // </div>
         <div className='relative flex flex-col h-full w-full z-10'>            
             <motion.div 
                 initial="hidden" 

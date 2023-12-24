@@ -27,14 +27,15 @@ export function Laptop({isOpen,...props}: {isOpen:boolean, screenview:string}) {
 
   // reverse image prop to show full front 
   const screenLoader = new THREE.TextureLoader()
-  const screen = screenLoader.load(props.screenview) // load img prop here 
+  const screen = screenLoader.load(props.screenview) // load img prop here
+  const brightness = 0.3 // set brightness here 
   screen.flipY = false;
 
   return (
     <group {...props} dispose={null} position={[1, -1, 0]}>
       <group rotation={[-Math.PI / 2, 0, 0]} scale={0.04} >
         <motion.group position={[-0.03, 111.69, 2.84]} scale={3.37} initial={"closed"} animate={"open"} transition={{delay:0.5, duration:1}} variants={variants} >
-          <mesh geometry={screenNode.geometry}  material={new THREE.MeshBasicMaterial({map: screen})} position={[0.01, -33.13, -0.84]} scale={0.3} /> 
+          <mesh geometry={screenNode.geometry}  material={new THREE.MeshBasicMaterial({color: new THREE.Color(brightness, brightness, brightness), map: screen})} position={[0.01, -33.13, -0.84]} scale={0.3} /> 
           <mesh geometry={blackInsetNode.geometry} material={materials['Display Rim 1']} position={[0.01, -33.13, -0.84]} scale={0.3} />
           <mesh geometry={rubberNode.geometry} material={materials['Display Rubber 1']} position={[0.01, -33.13, -0.84]} scale={0.3} />
           <mesh geometry={screenBackNode.geometry} material={materials['Body 2']} position={[0.01, -33.13, -0.84]} scale={0.3} />
@@ -60,9 +61,11 @@ export function Mobile({isOpen,...props}: {isOpen:boolean, screenview:string}) {
   const screen = screenLoader.load(props.screenview) // load img prop here 
   screen.flipY = false;
 
+  const frameColor = new THREE.Color(0x383942);
+
   return (
     <group {...props} dispose={null} scale={3} position={[0, 1, 0]}>
-      <mesh geometry={frame.geometry} material={materials.Frame} rotation={[0, -Math.PI / 2, 0]} />
+      <mesh geometry={frame.geometry} material={new THREE.MeshBasicMaterial({ color: frameColor })} rotation={[0, -Math.PI / 2, 0]} />
       <mesh geometry={logo.geometry} material={materials.Logo} />
       <mesh geometry={screenNode.geometry} material={new THREE.MeshBasicMaterial({map: screen})} rotation={[0, -Math.PI / 2, 0]} />
     </group>

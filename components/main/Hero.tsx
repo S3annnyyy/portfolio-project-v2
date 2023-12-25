@@ -1,9 +1,8 @@
 "use client"
 
 import React from 'react'
-import { motion, useMotionValue, useTransform } from 'framer-motion'
-import { slideInFromLeft, slideInFromRight } from '@/utils/motion'
-import teckstackSVG from "../../public/assets/techstack.svg"
+import { motion } from 'framer-motion'
+import { slideInFromLeft } from '@/utils/motion'
 import { ArrowRightIcon } from '@heroicons/react/24/solid'
 import TextDecrypt from '@/utils/TextDecrypt'
 
@@ -13,20 +12,6 @@ const Hero = () => {
     const scrollToSection = (sectionID: string) => {
         const section = document.getElementById(sectionID)
         if (section) {section.scrollIntoView({behavior: "smooth"})}
-    }
-
-    const x = useMotionValue(200);
-    const y = useMotionValue(200);
-    const limit = 35
-
-    const rotateX = useTransform(y, [0, 400], [limit, -limit]);
-    const rotateY = useTransform(x, [0, 400], [-limit, limit]);
-
-    function handleMouse(event:any) {
-        const rect = event.currentTarget.getBoundingClientRect();
-
-        x.set(event.clientX - rect.left);
-        y.set(event.clientY - rect.top);
     }
 
     return (
@@ -71,17 +56,7 @@ const Hero = () => {
                         View my projects <ArrowRightIcon className='h-5 w-5 inline'/>
                     </motion.button>
                 </div>                
-            </motion.div>
-
-            <motion.div 
-                    variants={slideInFromRight(0.8)} 
-                    className="w-screen h-screen flex justify-center items-center hidden md:block mt-10 ml-16 z-10"
-                    // style={{rotateX, rotateY}}
-                    // onMouseMove={handleMouse}
-                >
-                    {/* <Image src={teckstackSVG} alt="work icons"  height={650} width={650} />         */}
-                    {/* <HaloCanvas />                                 */}
-            </motion.div>
+            </motion.div>            
         </div>        
     )
 }

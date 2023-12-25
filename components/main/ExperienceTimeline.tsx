@@ -28,11 +28,11 @@ const ExperienceTimeline:FC = () => {
                 <p className="text-lg leading-8 text-gray-600">What I have done so far</p>
             </div>
         </div>
-        <VerticalTimeline>
+        <VerticalTimeline lineColor="">
             {
             workExperience.map(element => {
                 return (
-                    <VerticalTimelineElement
+                    <VerticalTimelineElement                        
                         visible={true}
                         key={ element.id }
                         className="vertical-timeline-element--work text=[#d1d1d1]-200"

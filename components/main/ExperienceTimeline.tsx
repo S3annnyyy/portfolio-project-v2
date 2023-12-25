@@ -8,6 +8,9 @@ import 'react-vertical-timeline-component/style.min.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer';
+import { Icon } from '@iconify/react';
+import { IconifyIcon } from '@iconify/react';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
 const ExperienceTimeline:FC = () => {
     const [ref, inView] = useInView({
@@ -39,7 +42,7 @@ const ExperienceTimeline:FC = () => {
                         contentStyle={element.contentStyle}
                         contentArrowStyle={element.contentArrowStyle}
                         iconStyle={element.iconStyle}
-                        icon={<FontAwesomeIcon icon={element.icon} />}
+                        icon={element.company === "Foodpanda, DeliveryHero" ? <Icon icon={element.icon as IconifyIcon} /> : <FontAwesomeIcon icon={element.icon as IconDefinition} />}
                     >
                         <h1 className="vertical-timeline-element-title tracking-[2.5px]">{element.title}</h1>                           
                         <h2 className="vertical-timeline-element-subtitle tracking-[1.5px] bg-gradient-to-r from-purple-500 to-primary">{element.company}</h2>

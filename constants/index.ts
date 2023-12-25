@@ -1,4 +1,5 @@
 import { faLinkedin, faGithub, faMedium, faTiktok, faMeta } from '@fortawesome/free-brands-svg-icons' 
+import foodpandaIcon from '@iconify/icons-simple-icons/foodpanda';
 import ACTProject from '@/public/assets/actProject.png'
 import SAProject from '@/public/assets/SentimentAnalysis.png'
 import StockProject from '@/public/assets/StockProject.png'
@@ -56,8 +57,8 @@ export const workExperience = [
         contentStyle: { background: '#1f2937', color: '#fff' },
         contentArrowStyle: { borderRight: '7px solid  #232631' },
         date: "Jan 2022 - July 2022",
-        iconStyle: { background: '#fff', color: '#0668E1'},
-        icon: faMeta
+        iconStyle: { background: '#fff', color: '#D70F64'},
+        icon: foodpandaIcon
     }
 ];
 

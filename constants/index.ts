@@ -1,9 +1,9 @@
 import { faLinkedin, faGithub, faMedium, faTiktok, faMeta } from '@fortawesome/free-brands-svg-icons' 
-import ACTProject from '@/public/assets/actProject2.png'
+import ACTProject from '@/public/assets/actProject.png'
 import SAProject from '@/public/assets/SentimentAnalysis.png'
 import StockProject from '@/public/assets/StockProject.png'
 import MaskProject from '@/public/assets/mask.gif'
-import RecipeDaddy from '@/public/assets/recipedaddy2.png'
+import RecipeDaddy from '@/public/assets/recipedaddy.png'
 
 export const Socials = [
     {

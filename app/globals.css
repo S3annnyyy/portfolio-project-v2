@@ -105,3 +105,18 @@ body {
             5% 35%, 
             0 0);    
 }
+
+.divider-card {
+    width: 90%;
+    text-align: center;
+    height: 3rem;
+    background-color: #68e2fa;
+    clip-path: polygon(
+            50% 0%, 
+            100% 0, 
+            100% 5%,  
+            35% 5%, 
+            30% 35%, 
+            5% 35%, 
+            0 0);    
+}

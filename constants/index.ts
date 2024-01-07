@@ -104,3 +104,5 @@ export const projectData = [
         platform: "web"
     }
 ]
+
+export const aboutInfo = `Hi there! I’m Sean, currently I am a sophomore at Singapore Management University majoring in Information Systems. #TODO and #IMPROVE`

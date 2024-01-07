@@ -1,3 +1,4 @@
+import About from '@/components/main/About'
 import ExperienceTimeline from '@/components/main/ExperienceTimeline'
 import Footer from '@/components/main/Footer'
 import Hero from '@/components/main/Hero'
@@ -10,6 +11,7 @@ export default function Home() {
         <div id='home'><Hero /></div>
         <div id='experience'><ExperienceTimeline /></div>
         <div id='projects'><Projects /></div>
+        <div id='about'><About /></div>
         <Footer />
       </div>   
     </main>

@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState, useEffect, FC } from 'react'
-import { faHome, faUser, faCode } from '@fortawesome/free-solid-svg-icons' 
+import { faHome, faUser, faCode, faCodeFork, faCodeBranch } from '@fortawesome/free-solid-svg-icons' 
 import { motion, AnimatePresence } from 'framer-motion'
 import { slideInFromLeft } from '@/utils/motion'
 import SideBarIcon from '@/components/sub/SideBarIcon'
@@ -48,10 +48,13 @@ const Sidebar:FC = () => {
                 <SideBarIcon icon={faHome} text="Home" isActive={activeSection === 'home'} />
             </motion.button>
             <motion.button  whileTap={{ scale: 0.9 }} onClick={() => scrollToSection('experience')}>
-                <SideBarIcon icon={faUser} text="Experience" isActive={activeSection === 'experience'} />
+                <SideBarIcon icon={faCodeBranch} text="Experience" isActive={activeSection === 'experience'} />
             </motion.button>
             <motion.button  whileTap={{ scale: 0.9 }} onClick={() => scrollToSection('projects')}>
                 <SideBarIcon icon={faCode} text="Projects" isActive={activeSection === 'projects'} />
+            </motion.button>
+            <motion.button  whileTap={{ scale: 0.9 }} onClick={() => scrollToSection('about')}>
+                <SideBarIcon icon={faUser} text="About" isActive={activeSection === 'about'} />
             </motion.button>
     </motion.div>
     </AnimatePresence>

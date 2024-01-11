@@ -34,7 +34,7 @@
   "devDependencies": {
     "@iconify/icons-simple-icons": "^1.2.74",
     "@iconify/react": "^4.1.1",
-    "@types/node": "^20",
+    "@types/node": "^20.11.0",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",

@@ -2,9 +2,11 @@ import React from 'react'
 import Image from 'next/image'
 import portrait from '@/public/assets/portrait.jpg'
 import { aboutInfo } from '@/constants/index'
+import  pdf  from "./types.s";
 
 
 const About = () => {
+    const resumePDF = pdf("resume.pdf");
   return (  
     <div className='flex items-center justify-center'>
         <div className="relative w-full group max-w-md min-w-0 mx-auto mb-6 break-words bg-gray-800 md:max-w-sm rounded-xl">
@@ -21,6 +23,14 @@ const About = () => {
                     <div className="flex flex-wrap justify-center">
                         <div className="w-full px-6">
                             <p className="mb-4 font-light leading-relaxed text-gray-600">{aboutInfo}</p>                                
+                        </div>
+                        <div className='w-full flex flex-row mx-4 space-x-4 place-content-center'>
+                            <button className='secondary-btn bg-blue-500'>
+                                <a href={resumePDF} download="SeanYapResume.pdf">Resume</a>
+                            </button>
+                            <button className='secondary-btn bg-blue-500'>
+                                Contact
+                            </button>
                         </div>
                     </div>
                 </div>

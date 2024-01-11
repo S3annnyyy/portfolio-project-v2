@@ -25,10 +25,10 @@ const About = () => {
                             <p className="mb-4 font-light leading-relaxed text-gray-600">{aboutInfo}</p>                                
                         </div>
                         <div className='w-full flex flex-row mx-4 space-x-4 place-content-center'>
-                            <button className='secondary-btn bg-blue-500'>
+                            <button className='secondary-btn bg-secondary'>
                                 <a href={resumePDF} download="SeanYapResume.pdf">Resume</a>
                             </button>
-                            <button className='secondary-btn bg-blue-500'>
+                            <button className='secondary-btn bg-primary'>
                                 Contact
                             </button>
                         </div>

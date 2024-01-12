@@ -28,7 +28,7 @@ const decryptOptions:DecryptOptions = {
         'バ', 'ビ', 'ブ', 'ベ', 'ボ',
         'パ', 'ピ', 'プ', 'ペ', 'ポ',
     ],
-    interval: 45,
+    interval: 70,
 };
 
 const TextDecrypt: React.FC<TextDecryptProps> = (props) => {

@@ -23,18 +23,18 @@ const Hero = () => {
             >      
                 <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">                    
                     <motion.div 
-                        variants={slideInFromLeft(0.5)} 
+                        variants={slideInFromLeft(1)} 
                         className="flex flex-col mt-6 max-w-[600px] w-auto h-auto">
                         <div className='text-base md:text-2xl text-textBody font-primary tracking-[0.4rem] whitespace-nowrap'>
                             <TextDecrypt text="SEAN YAP CHENG KANG" />
                         </div>
                     </motion.div>
 
-                    <motion.div variants={slideInFromLeft(0.5)} className="flex flex-col mt-6 max-w-[1000px] w-screen">               
+                    <motion.div variants={slideInFromLeft(1)} className="flex flex-col mt-6 max-w-[1000px] w-screen">               
                         <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-primary text-6xl md:text-8xl text-textBody">Portfolio Website</h1>
                     </motion.div>
 
-                    <motion.div variants={slideInFromLeft(0.8)} className="text-white my-5 max-w-[1000px]">
+                    <motion.div variants={slideInFromLeft(1)} className="text-white my-5 max-w-[1000px]">
                     <span 
                         className="inline-flex flex-col 
                             h-[calc(theme(fontSize.base)*theme(lineHeight.tight))] 

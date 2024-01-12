@@ -1,8 +1,11 @@
+"use client"
+
 import React from 'react'
 import Image from 'next/image'
 import portrait from '@/public/assets/portrait.jpg'
 import { aboutInfo } from '@/constants/index'
 import  pdf  from "./types.s";
+import { motion } from 'framer-motion'
 
 
 const About = () => {
@@ -25,8 +28,12 @@ const About = () => {
                             <p className="mb-4 font-light leading-relaxed text-gray-600">{aboutInfo}</p>                                
                         </div>
                         <div className='w-full flex flex-row mx-4 space-x-4 place-content-center'>
-                            <button className='secondary-btn bg-secondary'><a href={resumePDF} download="SeanYapResume.pdf">Resume</a></button>
-                            <button className='secondary-btn bg-primary'>Contact</button>                              
+                            <motion.button className='primary-button-left bg-secondary px-4 py-1' whileHover={{ scale: 1.1 }}>
+                                <a href={resumePDF} download="SeanYapResume.pdf">Resume</a>
+                            </motion.button>
+                            <motion.button className='primary-button bg-primary px-4 py-1' onClick={() => {alert("Sorry! Still under development😅")}} whileHover={{ scale: 1.1 }}>
+                                Contact
+                            </motion.button>                              
                         </div>
                     </div>
                 </div>

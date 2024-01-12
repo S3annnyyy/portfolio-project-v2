@@ -3,14 +3,10 @@ import { useDencrypt } from "use-dencrypt-effect";
 
 interface TextDecryptProps {
     text: string;
-}
-
-interface DecryptOptions {
-    chars: string[];
     interval: number;
 }
 
-const decryptOptions:DecryptOptions = {
+const decryptOptions = {
     chars: [
         'ア', 'イ', 'ウ', 'エ', 'オ',
         'カ', 'キ', 'ク', 'ケ', 'コ',
@@ -27,14 +23,13 @@ const decryptOptions:DecryptOptions = {
         'ダ', 'ヂ', 'ヅ', 'デ', 'ド',
         'バ', 'ビ', 'ブ', 'ベ', 'ボ',
         'パ', 'ピ', 'プ', 'ペ', 'ポ',
-    ],
-    interval: 70,
+    ]    
 };
 
 const TextDecrypt: React.FC<TextDecryptProps> = (props) => {
     const [result, dencrypt] = useDencrypt({
         chars: decryptOptions.chars.join(''), // Join the array into a string
-        interval: decryptOptions.interval,
+        interval: props.interval,
     });
 
     useEffect(() => {

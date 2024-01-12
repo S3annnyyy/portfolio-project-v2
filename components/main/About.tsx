@@ -19,18 +19,14 @@ const About = () => {
 
                 <div className="mt-2 mt-20 text-center items-center">                    
                     <h3 className="mt-1 mb-1 text-2xl font-bold leading-normal text-white">Sean Yap</h3>                    
-                    <div className='divider-card mt-5 mx-auto'></div>                    
+                    {/* <div className='divider-card mt-5 mx-auto'></div>                     */}
                     <div className="flex flex-wrap justify-center">
                         <div className="w-full px-6">
                             <p className="mb-4 font-light leading-relaxed text-gray-600">{aboutInfo}</p>                                
                         </div>
                         <div className='w-full flex flex-row mx-4 space-x-4 place-content-center'>
-                            <button className='secondary-btn bg-secondary'>
-                                <a href={resumePDF} download="SeanYapResume.pdf">Resume</a>
-                            </button>
-                            <button className='secondary-btn bg-primary'>
-                                Contact
-                            </button>
+                            <button className='secondary-btn bg-secondary'><a href={resumePDF} download="SeanYapResume.pdf">Resume</a></button>
+                            <button className='secondary-btn bg-primary'>Contact</button>                              
                         </div>
                     </div>
                 </div>

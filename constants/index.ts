@@ -105,4 +105,4 @@ export const projectData = [
     }
 ]
 
-export const aboutInfo = `Hi there! I’m Sean, currently I am a sophomore at Singapore Management University majoring in Information Systems. #TODO and #IMPROVE`
+export const aboutInfo = `Hi there! Thanks for visiting my website! I'm currently a sophomore at Singapore Management University majoring in Information System with dual track in Business Analytics and Digital Cloud Solutions. Feel free to get a copy of my resume or get in touch with me. Cheers!`

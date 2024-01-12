@@ -16,18 +16,13 @@ const HaloBackground = (props:any) => {
              THREE: THREE,
              mouseControls: true,
              touchControls: true,
-             gyroControls: false,
-             forceAnimate: true,
+             gyroControls: false,           
              minHeight: 1000,
-             minWidth: 1000,
-             scaleMobile: 1.0,
-             color1: "#ff0000",
-             color2: "#00ff00",
-             size: 1,
+             minWidth: 1000,           
              xOffset: 0.3,
              yOffset: 0.1,
              backgroundColor: "#181818",
-             amplitudeFactor: 1,
+             amplitudeFactor: 1.0,            
            })
          );
        }
@@ -37,7 +32,7 @@ const HaloBackground = (props:any) => {
      }, [vantaEffect]);
   
   return (
-      <div ref={vantaRef} className='halo-background'></div>
+      <div ref={vantaRef}></div>
   )
 }
 

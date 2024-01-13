@@ -31,7 +31,7 @@ const About = () => {
                             <motion.button className='primary-button-left bg-secondary px-4 py-1' whileHover={{ scale: 1.1 }}>
                                 <a href={resumePDF} download="SeanYapResume.pdf">Resume</a>
                             </motion.button>
-                            <motion.button className='primary-button bg-primary px-4 py-1' whileHover={{ scale: 1.1 }}>
+                            <motion.button className='primary-button bg-primary px-4 py-1' onClick={() => {alert("Sorry! Still under development😅")}} whileHover={{ scale: 1.1 }}>
                                 Contact
                             </motion.button>                              
                         </div>

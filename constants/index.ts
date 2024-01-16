@@ -39,7 +39,7 @@ export const workExperience = [
         ],
         contentStyle: { background: '#1f2937', color: '#fff' },
         contentArrowStyle: { borderRight: '7px solid  #232631' },
-        date: "May 2023 - present",
+        date: "May 2023 - October 2023",
         iconStyle: { background: '#1d1836', color: '#fff' },
         icon: faTiktok
     }, 

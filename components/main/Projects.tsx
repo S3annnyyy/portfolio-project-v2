@@ -7,10 +7,6 @@ import { projectData } from '@/constants'
 import { slideInFromRight, slideInFromLeft } from '@/utils/motion'
 import { motion } from 'framer-motion'
 
-interface techStack {
-  [index: number]: string;
-}
-
 interface projectKeys {
   id: number;
   title: string;
@@ -20,7 +16,7 @@ interface projectKeys {
     src: string;
   };
   platform: string;
-  stack: Array<techStack>;
+  stack: string[];
 }
 
 const ProjectItem:FC<{ project: projectKeys }> = ({ project }) => {
@@ -46,7 +42,12 @@ const ProjectItem:FC<{ project: projectKeys }> = ({ project }) => {
           </div>
             
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">{project.title}</h2>   
-          <p className="mt-6 text-lg leading-8 text-gray-300">{project.description}</p>             
+          <p className="mt-6 text-lg leading-8 text-gray-500 font-light">{project.description}</p>
+          <div className='flex flex-row flex-wrap place-content-center md:place-content-start '>
+            {project.stack.map((stackItem, index) => (
+              <div key={index} className='projectStack'>{stackItem}</div>
+            ))}            
+          </div>             
           <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">              
             <a href={project.urlLink} className="text-xl font-semibold leading-6 text-primary z-[20]">
             View Project <span aria-hidden="true">→</span>

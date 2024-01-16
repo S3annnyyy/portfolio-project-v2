@@ -96,7 +96,14 @@ body {
 
     .sidebar-icon.active {
         @apply bg-primary text-gray-800
-      }     
+      }
+      
+    .projectStack {
+        @apply text-sm font-light mr-2 px-2 py-1 
+               bg-primary bg-opacity-20 
+               text-primary 
+               rounded-full items-center
+    }  
 }
 
 .divider {

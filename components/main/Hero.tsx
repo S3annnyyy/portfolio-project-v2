@@ -23,16 +23,16 @@ const Hero = () => {
             >      
                 <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">                    
                     <div className="flex flex-col mt-6 max-w-[600px] w-auto h-auto">
-                        <div className='text-base md:text-2xl text-textBody font-primary tracking-[0.4rem] whitespace-nowrap'>
+                        <div className='text-base md:text-2xl text-textBody font-primary tracking-[0.4rem] whitespace-nowrap h-4'>
                             <TextDecrypt text="SEAN YAP CHENG KANG" interval={40} />
                         </div>
                     </div>
 
-                    <motion.div variants={slideInFromLeft(0.5)} className="flex flex-col mt-6 max-w-[1000px] w-screen">               
+                    <motion.div variants={slideInFromLeft(1.3)} className="flex flex-col mt-6 max-w-[1000px] w-screen">               
                         <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-primary text-6xl md:text-8xl text-textBody">Portfolio Website</h1>
                     </motion.div>
 
-                    <motion.div variants={slideInFromLeft(0.8)} className="text-white my-5 max-w-[1000px]">
+                    <motion.div variants={slideInFromLeft(1.6)} className="text-white my-5 max-w-[1000px]">
                     <span 
                         className="inline-flex flex-col 
                             h-[calc(theme(fontSize.base)*theme(lineHeight.tight))] 
@@ -50,7 +50,7 @@ const Hero = () => {
                         </span>
                     </motion.div>                 
 
-                    <motion.button onClick={() => scrollToSection('projects')} variants={slideInFromLeft(0.8)} whileHover={{ scale: 1.1 }} className="py-3 primary-button text-center text-black text-lg cursor-pointer max-w-[200px]">
+                    <motion.button onClick={() => scrollToSection('projects')} variants={slideInFromLeft(1.6)} whileHover={{ scale: 1.1 }} className="py-3 primary-button text-center text-black text-lg cursor-pointer max-w-[200px]">
                         View my projects <ArrowRightIcon className='h-5 w-5 inline'/>
                     </motion.button>
                 </div>                

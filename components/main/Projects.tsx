@@ -7,6 +7,10 @@ import { projectData } from '@/constants'
 import { slideInFromRight, slideInFromLeft } from '@/utils/motion'
 import { motion } from 'framer-motion'
 
+interface techStack {
+  [index: number]: string;
+}
+
 interface projectKeys {
   id: number;
   title: string;
@@ -16,6 +20,7 @@ interface projectKeys {
     src: string;
   };
   platform: string;
+  stack: Array<techStack>;
 }
 
 const ProjectItem:FC<{ project: projectKeys }> = ({ project }) => {

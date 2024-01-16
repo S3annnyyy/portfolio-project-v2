@@ -5,6 +5,7 @@ import SAProject from '@/public/assets/SentimentAnalysis.png'
 import StockProject from '@/public/assets/StockProject.png'
 import MaskProject from '@/public/assets/mask.gif'
 import RecipeDaddy from '@/public/assets/recipedaddy.png'
+import Portfolio from '@/public/assets/portfolio.png'
 
 export const Socials = [
     {
@@ -69,7 +70,8 @@ export const projectData = [
         description:  'A website that uses OpenAI GPT-4 model to generate recipes & help Singaporeans meal prep as part of UN Sustainable development Goal #12: Responsible Consumption',        
         urlLink: "https://github.com/S3annnyyy/IS216-RecipeDaddy",
         image: RecipeDaddy,
-        platform: "web"
+        platform: "web",
+        stack: ["VueJs", "Boostrap", "Django", "Javascript", "GPT-4"]
     }, 
     {
         id: 2,
@@ -77,10 +79,23 @@ export const projectData = [
         description:  'A productivity mobile app developed during Google Ignite Hackathon to solve UN Sustainable development Goal #12: Responsible Consumption. [2nd place]',        
         urlLink: "https://github.com/jeremychow99/google-ignite-project",
         image: ACTProject,
-        platform: "mobile"
-    }, 
+        platform: "mobile",
+        stack: ["Flutter", "Dart"]
+    },
     {
         id: 3,
+        title: "seanyckang.com (v2)",
+        description: "Personal portfolio website",
+        urlLink: "https://seanyckang.com",
+        image: Portfolio,
+        platform: "web",
+        stack: ["React", "NextJs", "ThreeJs", "Tailwind CSS", "Typescript"] 
+    }     
+]
+
+export const articleData = [
+    {
+        id: 1,
         title: 'Mask Detection model',
         description:  'Computer Vision model that detects people wearing/not wearing masks. Trained with 853 images using YOLOv5',       
         urlLink: "https://towardsdatascience.com/mask-detection-using-yolov5-ae40979227a6",
@@ -88,7 +103,7 @@ export const projectData = [
         platform: "web"
     },
     {
-        id: 4,
+        id: 2,
         title: 'Correlations between Reddit and Stocks',
         description:  'Finding correlations between Reddit posts on r/wallstreetbets with company share price',       
         urlLink: "https://medium.com/analytics-vidhya/finding-correlations-between-reddit-and-the-stock-market-using-statistics-4926a25a386e",
@@ -96,7 +111,7 @@ export const projectData = [
         platform: "web"
     },
     {
-        id: 5,
+        id: 3,
         title: 'Text Classification & Sentiment Analysis on r/SGExams',
         description:  'Unearthing Singaporean students sentiments by education level, using SVM, VADER Lexicons and PushShift API.',        
         urlLink: "https://towardsdatascience.com/text-classification-sentiment-analysis-on-r-sgexams-4ea341134fba",

@@ -15,7 +15,7 @@ const Hero = () => {
     }
 
     return (
-        <div className='relative flex flex-col grid grid-cols-1 md:grid-cols-2 h-screen w-screen gap-1 z-10 align-middle overflow-hidden'>
+        <div className='relative flex-col grid grid-cols-1 md:grid-cols-2 h-screen w-screen gap-1 z-10 align-middle overflow-hidden'>
            <motion.div 
                 initial="hidden" 
                 animate="visible" 

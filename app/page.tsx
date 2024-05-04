@@ -1,8 +1,10 @@
-import About from '@/components/main/About'
-import ExperienceTimeline from '@/components/main/ExperienceTimeline'
-import Footer from '@/components/main/Footer'
-import Hero from '@/components/main/Hero'
-import Projects from '@/components/main/Projects'
+import { lazy, Suspense } from 'react'
+
+const About = lazy(() => import('@/components/main/About'))
+const ExperienceTimeline = lazy(() => import('@/components/main/ExperienceTimeline')) 
+const Footer = lazy(() => import('@/components/main/Footer'))
+const Hero = lazy(() => import('@/components/main/Hero'))
+const Projects = lazy(() => import('@/components/main/Projects'))
  
 export default function Home() {
   return (

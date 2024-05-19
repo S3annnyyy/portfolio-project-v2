@@ -1,5 +1,6 @@
 import { faLinkedin, faGithub, faMedium, faTiktok, faMeta } from '@fortawesome/free-brands-svg-icons' 
 import foodpandaIcon from '@iconify/icons-simple-icons/foodpanda';
+import seagateIcon from '@iconify/icons-simple-icons/seagate';
 import ACTProject from '@/public/assets/actProject.png'
 import SAProject from '@/public/assets/SentimentAnalysis.png'
 import StockProject from '@/public/assets/StockProject.png'
@@ -28,8 +29,22 @@ export const Socials = [
 export const workExperience = [
     {
         id: 1,
+        title: 'Artificial Intelligence Intern',
+        company: "Seagate",
+        points: [
+            "Developing an internal Python tool using Error Level Analysis, Hidden Markov Models and Metadata Extraction to detect marketing fraud via ensemble scoring approach, cutting down investigation time by 90%",
+            "Conducting research on leveraging AI capabilities, including anomaly detection and fraud analysis, to enhance remediation strategies and coverage effectiveness"  
+        ],
+        contentStyle: { background: '#1f2937', color: '#fff' },
+        contentArrowStyle: { borderRight: '7px solid  #232631' },
+        date: "May 2024 - Current",
+        iconStyle: { background: '#fff', color: '#6EBE49'},
+        icon: seagateIcon
+    },
+    {
+        id: 2,
         title: 'Risk Analyst Intern',
-        company: "Tiktok",
+        company: "TikTok",
         points: [
             "Led weekly risk assessments and performed in-depth analysis on auction ads across global markets, successfully identifying and addressing risk violations and emerging trends",
             "Kickstarted the launch of the SEA Accelerator Program, empowering agencies to effectively manage bad actors through the implementation of blocklisting and suspension mechanisms using GNNs RegEx, lowering risk metrics by 10%",
@@ -44,7 +59,7 @@ export const workExperience = [
         icon: faTiktok
     }, 
     {
-        id: 2,
+        id: 3,
         title: 'Data Analyst Intern',
         company: "Foodpanda",
         points: [

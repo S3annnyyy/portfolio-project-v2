@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@iconify/icons-simple-icons": "^1.2.74",
-    "@iconify/react": "^4.1.1",
+    "@iconify/react": "^5.0.0-beta.2",
     "@types/node": "^20.11.0",
     "@types/react": "^18",
     "@types/react-dom": "^18",

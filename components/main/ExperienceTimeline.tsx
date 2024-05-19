@@ -1,7 +1,7 @@
 "use client"
 
 import React, { FC } from 'react'
-import { workExperience } from '@/constants/index'
+import { workExperience } from '@/data/index'
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component'
 import { slideInFromLeft } from '@/utils/motion'
 import 'react-vertical-timeline-component/style.min.css'

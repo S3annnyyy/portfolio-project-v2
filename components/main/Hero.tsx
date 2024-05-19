@@ -5,6 +5,12 @@ import { motion } from 'framer-motion'
 import { slideInFromLeft } from '@/utils/motion'
 import { ArrowRightIcon } from '@heroicons/react/24/solid'
 import TextDecrypt from '@/utils/TextDecrypt'
+import dynamic from 'next/dynamic'
+import { sampleArcs } from '@/data'
+
+const World = dynamic(() => import("../sub/globe").then((m) => m.World), {
+    ssr: false,
+  });
 
 
 const Hero = () => {
@@ -13,6 +19,29 @@ const Hero = () => {
         const section = document.getElementById(sectionID)
         if (section) {section.scrollIntoView({behavior: "smooth"})}
     }
+
+    const globeConfig = {
+        pointSize: 4,
+        globeColor: "#543f73",
+        showAtmosphere: true,
+        atmosphereColor: "#62E2FA",
+        atmosphereAltitude: 0.15,
+        emissive: "#062056",
+        emissiveIntensity: 0.1,
+        shininess: 1.9,
+        polygonColor: "rgba(255,255,255,0.7)",
+        ambientLight: "#38bdf8",
+        directionalLeftLight: "#ffffff",
+        directionalTopLight: "#ffffff",
+        pointLight: "#ffffff",
+        arcTime: 3000,
+        arcLength: 0.9,
+        rings: 1,
+        maxRings: 3,
+        initialPosition: { lat: 22.3193, lng: 114.1694 },
+        autoRotate: true,
+        autoRotateSpeed: 0.0001,
+      };      
 
     return (
         <div className='relative flex-col grid grid-cols-1 md:grid-cols-2 h-screen w-screen gap-1 z-10 align-middle overflow-hidden'>
@@ -53,8 +82,9 @@ const Hero = () => {
                     <motion.button onClick={() => scrollToSection('projects')} variants={slideInFromLeft(1.6)} whileHover={{ scale: 1.1 }} className="py-3 primary-button text-center text-black text-lg cursor-pointer max-w-[200px]">
                         View my projects <ArrowRightIcon className='h-5 w-5 inline'/>
                     </motion.button>
-                </div>                
-            </motion.div>            
+                </div>     
+            </motion.div>        
+            <World data={sampleArcs} globeConfig={globeConfig} />;        
         </div>        
     )
 }

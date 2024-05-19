@@ -3,15 +3,16 @@
 import React from 'react'
 import Image from 'next/image'
 import portrait from '@/public/assets/portrait.jpg'
-import { aboutInfo } from '@/constants/index'
+import { aboutInfo } from '@/data/index'
 import  pdf  from "./types.s";
 import { motion } from 'framer-motion'
 
 
 const About = () => {
-    const resumePDF = pdf("resume.pdf");
+    const resumePDF = pdf("resume.pdf");   
   return (  
-    <div className='flex items-center justify-center'>
+    <div className='flex items-center justify-center'>               
+
         <div className="relative w-full group max-w-md min-w-0 mx-auto mb-6 break-words bg-gray-800 md:max-w-sm rounded-xl">
             <div className="pb-6">
                 <div className="flex flex-wrap justify-center">
@@ -20,9 +21,9 @@ const About = () => {
                     </div>
                 </div>
 
-                <div className="mt-2 mt-20 text-center items-center">                    
+                <div className="mt-20 text-center items-center">                    
                     <h3 className="mt-1 mb-1 text-2xl font-bold leading-normal text-white">Sean Yap</h3>                    
-                    {/* <div className='divider-card mt-5 mx-auto'></div>                     */}
+                    <div className='divider-card mt-5 mx-auto'></div>                    
                     <div className="flex flex-wrap justify-center">
                         <div className="w-full px-6">
                             <p className="mb-4 font-light leading-relaxed text-gray-600">{aboutInfo}</p>                                
@@ -39,7 +40,7 @@ const About = () => {
                 </div>
             </div>
         </div>
-    </div>
+    </div>    
   )
 }
 

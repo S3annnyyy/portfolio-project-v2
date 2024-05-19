@@ -1,7 +1,7 @@
 "use client"
 
 import React, { FC } from 'react'
-import { workExperience } from '@/constants/index'
+import { workExperience } from '@/data/index'
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component'
 import { slideInFromLeft } from '@/utils/motion'
 import 'react-vertical-timeline-component/style.min.css'
@@ -42,7 +42,7 @@ const ExperienceTimeline:FC = () => {
                         contentStyle={element.contentStyle}
                         contentArrowStyle={element.contentArrowStyle}
                         iconStyle={element.iconStyle}
-                        icon={element.company === "Foodpanda" ? <Icon icon={element.icon as IconifyIcon} /> : <FontAwesomeIcon icon={element.icon as IconDefinition} />}
+                        icon={element.company !== "TikTok" ? <Icon icon={element.icon as IconifyIcon} /> : <FontAwesomeIcon icon={element.icon as IconDefinition} />}
                     >
                         <h1 className="vertical-timeline-element-title tracking-[2.5px]">{element.title} &middot; {element.company}</h1>                           
                         {/* <h2 className="vertical-timeline-element-subtitle tracking-[1.5px] bg-gradient-to-r from-purple-500 to-primary">{element.company}</h2> */}

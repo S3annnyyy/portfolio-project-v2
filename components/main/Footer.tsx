@@ -1,5 +1,5 @@
 import React from 'react'
-import { Socials } from '@/constants/index'
+import { Socials } from '@/data/index'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Footer = () => {

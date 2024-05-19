@@ -3,7 +3,7 @@
 import React, { FC } from 'react'
 import ProjectComponent from '@/components/sub/ProjectComponent'
 import { useInView } from 'react-intersection-observer';
-import { projectData } from '@/constants'
+import { projectData } from '@/data'
 import { slideInFromRight, slideInFromLeft } from '@/utils/motion'
 import { motion } from 'framer-motion'
 

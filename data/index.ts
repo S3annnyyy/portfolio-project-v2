@@ -1,0 +1,501 @@
+import { faLinkedin, faGithub, faMedium, faTiktok, faMeta } from '@fortawesome/free-brands-svg-icons' 
+import foodpandaIcon from '@iconify/icons-simple-icons/foodpanda';
+import seagateIcon from '@iconify/icons-simple-icons/seagate';
+import ACTProject from '@/public/assets/actProject.png'
+import SAProject from '@/public/assets/SentimentAnalysis.png'
+import StockProject from '@/public/assets/StockProject.png'
+import MaskProject from '@/public/assets/mask.gif'
+import RecipeDaddy from '@/public/assets/recipedaddy.png'
+import Portfolio from '@/public/assets/portfolio.png'
+
+export const Socials = [
+    {
+        name: "Linkedin",
+        icon: faLinkedin,
+        link: "https://www.linkedin.com/in/seanyckang/"
+    },
+    {
+        name: "Github",
+        icon: faGithub,
+        link: "https://github.com/S3annnyyy"
+    },
+    {
+        name: "Medium",
+        icon: faMedium,
+        link: "https://seanyckang.medium.com/"
+    },
+];
+
+export const workExperience = [
+    {
+        id: 1,
+        title: 'Artificial Intelligence Intern',
+        company: "Seagate",
+        points: [
+            "Developing an internal Python tool using Error Level Analysis, Hidden Markov Models and Metadata Extraction to detect marketing fraud via ensemble scoring approach, cutting down investigation time by 90%",
+            "Conducting research on leveraging AI capabilities, including anomaly detection and fraud analysis, to enhance remediation strategies and coverage effectiveness"  
+        ],
+        contentStyle: { background: '#1f2937', color: '#fff' },
+        contentArrowStyle: { borderRight: '7px solid  #232631' },
+        date: "May 2024 - Current",
+        iconStyle: { background: '#fff', color: '#6EBE49'},
+        icon: seagateIcon
+    },
+    {
+        id: 2,
+        title: 'Risk Analyst Intern',
+        company: "TikTok",
+        points: [
+            "Led weekly risk assessments and performed in-depth analysis on auction ads across global markets, successfully identifying and addressing risk violations and emerging trends",
+            "Kickstarted the launch of the SEA Accelerator Program, empowering agencies to effectively manage bad actors through the implementation of blocklisting and suspension mechanisms using GNNs RegEx, lowering risk metrics by 10%",
+            "Spearheaded the development of visualization dashboards to enhance reporting efficiency, support cross-functional teams, and enable real-time monitoring of key risk metrics",
+            "Conducted post-opening of Forex market assessment, combining a risk assessment matrix and detailed case deep-dives, to thoroughly evaluate the impact of the Forex market on SEA markets. Delivered valuable insights and recommendations regarding the safety and viability of Forex within these markets",
+            "Created audio to text translator using OpenAI speech recognition model to reduce cross-language ads moderation duration by 15%"
+        ],
+        contentStyle: { background: '#1f2937', color: '#fff' },
+        contentArrowStyle: { borderRight: '7px solid  #232631' },
+        date: "May 2023 - October 2023",
+        iconStyle: { background: '#1d1836', color: '#fff' },
+        icon: faTiktok
+    }, 
+    {
+        id: 3,
+        title: 'Data Analyst Intern',
+        company: "Foodpanda",
+        points: [
+            "Adviced the commercial team in category trends and distribution gaps; drove the creation of an interactive dashboard to help with insights and analysis for category market share, basket penetration, customer penetration and product distribution dashboard(ND, PCV, ACV, SPPD)",
+            "Adviced the commercial team and pandamart suppliers in optimizing promotions via a Market Basket Analysis using Pyspark framework (FP-growth algorithm) to identify and provide key insights to customer buying patterns across all categories",
+            "Analyzed monthly promotions and designed a forecasting framework to help the commercial team optimize promotion strategy and supplier funding",
+            "Team leader for Foodpanda's hackathon challenge (Overall champion). Proposed algorithm that segments sales of goods into selling velocity to then be further segregated to maximise picker and prep time efficiency",
+            "Led recurring consultative sessions to help address business issues via dashboards using Google Datastudio & BigQuery",
+            "Performed in-depth quantitative analysis for campaigns/promotions/experiments to understand better on promotion mechanics and sales performance"
+        ],
+        contentStyle: { background: '#1f2937', color: '#fff' },
+        contentArrowStyle: { borderRight: '7px solid  #232631' },
+        date: "Jan 2022 - July 2022",
+        iconStyle: { background: '#fff', color: '#D70F64'},
+        icon: foodpandaIcon
+    }
+];
+
+export const projectData = [
+    {
+        id: 1,
+        title: 'RecipeDaddy Full stack VueJs Web Application',
+        description:  'A website that uses OpenAI GPT-4 model to generate recipes & help Singaporeans meal prep as part of UN Sustainable development Goal #12: Responsible Consumption',        
+        urlLink: "https://github.com/S3annnyyy/IS216-RecipeDaddy",
+        image: RecipeDaddy,
+        platform: "web",
+        stack: ["VueJs", "Boostrap", "Django", "Javascript", "GPT-4"]
+    }, 
+    {
+        id: 2,
+        title: '"ACT" Flutter Mobile Application',
+        description:  'A productivity mobile app developed during Google Ignite Hackathon to solve UN Sustainable development Goal #12: Responsible Consumption. [2nd place]',        
+        urlLink: "https://github.com/jeremychow99/google-ignite-project",
+        image: ACTProject,
+        platform: "mobile",
+        stack: ["Flutter", "Dart"]
+    },
+    {
+        id: 3,
+        title: "seanyckang.com (v2)",
+        description: "Personal portfolio website",
+        urlLink: "https://seanyckang.com",
+        image: Portfolio,
+        platform: "web",
+        stack: ["React", "NextJs", "ThreeJs", "Tailwind CSS", "Typescript"] 
+    }     
+]
+
+export const articleData = [
+    {
+        id: 1,
+        title: 'Mask Detection model',
+        description:  'Computer Vision model that detects people wearing/not wearing masks. Trained with 853 images using YOLOv5',       
+        urlLink: "https://towardsdatascience.com/mask-detection-using-yolov5-ae40979227a6",
+        image: MaskProject,
+        platform: "web"
+    },
+    {
+        id: 2,
+        title: 'Correlations between Reddit and Stocks',
+        description:  'Finding correlations between Reddit posts on r/wallstreetbets with company share price',       
+        urlLink: "https://medium.com/analytics-vidhya/finding-correlations-between-reddit-and-the-stock-market-using-statistics-4926a25a386e",
+        image: StockProject,
+        platform: "web"
+    },
+    {
+        id: 3,
+        title: 'Text Classification & Sentiment Analysis on r/SGExams',
+        description:  'Unearthing Singaporean students sentiments by education level, using SVM, VADER Lexicons and PushShift API.',        
+        urlLink: "https://towardsdatascience.com/text-classification-sentiment-analysis-on-r-sgexams-4ea341134fba",
+        image: SAProject,
+        platform: "web"
+    }
+]
+
+export const aboutInfo = `Hi there! Thanks for visiting my website! I'm currently a sophomore at Singapore Management University majoring in Information System with dual track in Business Analytics and Digital Cloud Solutions. Feel free to get a copy of my resume or get in touch with me. Cheers!`
+
+export const sampleArcs = [
+{
+    order: 1,
+    startLat: -19.885592,
+    startLng: -43.951191,
+    endLat: -22.9068,
+    endLng: -43.1729,
+    arcAlt: 0.1,
+    color: '#68e2fa',
+},
+{
+    order: 1,
+    startLat: 28.6139,
+    startLng: 77.209,
+    endLat: 3.139,
+    endLng: 101.6869,
+    arcAlt: 0.2,
+    color: '#68e2fa',
+},
+{
+    order: 1,
+    startLat: -19.885592,
+    startLng: -43.951191,
+    endLat: -1.303396,
+    endLng: 36.852443,
+    arcAlt: 0.5,
+    color: '#68e2fa',
+},
+{
+    order: 2,
+    startLat: 1.3521,
+    startLng: 103.8198,
+    endLat: 35.6762,
+    endLng: 139.6503,
+    arcAlt: 0.2,
+    color: '#68e2fa',
+},
+{
+    order: 2,
+    startLat: 51.5072,
+    startLng: -0.1276,
+    endLat: 3.139,
+    endLng: 101.6869,
+    arcAlt: 0.3,
+    color: '#68e2fa',
+},
+{
+    order: 2,
+    startLat: -15.785493,
+    startLng: -47.909029,
+    endLat: 36.162809,
+    endLng: -115.119411,
+    arcAlt: 0.3,
+    color: '#68e2fa',
+},
+{
+    order: 3,
+    startLat: -33.8688,
+    startLng: 151.2093,
+    endLat: 22.3193,
+    endLng: 114.1694,
+    arcAlt: 0.3,
+    color: '#68e2fa',
+},
+{
+    order: 3,
+    startLat: 21.3099,
+    startLng: -157.8581,
+    endLat: 40.7128,
+    endLng: -74.006,
+    arcAlt: 0.3,
+    color: '#68e2fa',
+},
+{
+    order: 3,
+    startLat: -6.2088,
+    startLng: 106.8456,
+    endLat: 51.5072,
+    endLng: -0.1276,
+    arcAlt: 0.3,
+    color: '#68e2fa',
+},
+{
+    order: 4,
+    startLat: 11.986597,
+    startLng: 8.571831,
+    endLat: -15.595412,
+    endLng: -56.05918,
+    arcAlt: 0.5,
+    color: '#68e2fa',
+},
+{
+    order: 4,
+    startLat: -34.6037,
+    startLng: -58.3816,
+    endLat: 22.3193,
+    endLng: 114.1694,
+    arcAlt: 0.7,
+    color: '#68e2fa',
+},
+{
+    order: 4,
+    startLat: 51.5072,
+    startLng: -0.1276,
+    endLat: 48.8566,
+    endLng: -2.3522,
+    arcAlt: 0.1,
+    color: '#68e2fa',
+},
+{
+    order: 5,
+    startLat: 14.5995,
+    startLng: 120.9842,
+    endLat: 51.5072,
+    endLng: -0.1276,
+    arcAlt: 0.3,
+    color: '#68e2fa',
+},
+{
+    order: 5,
+    startLat: 1.3521,
+    startLng: 103.8198,
+    endLat: -33.8688,
+    endLng: 151.2093,
+    arcAlt: 0.2,
+    color: '#68e2fa',
+},
+{
+    order: 5,
+    startLat: 34.0522,
+    startLng: -118.2437,
+    endLat: 48.8566,
+    endLng: -2.3522,
+    arcAlt: 0.2,
+    color: '#68e2fa',
+},
+{
+    order: 6,
+    startLat: -15.432563,
+    startLng: 28.315853,
+    endLat: 1.094136,
+    endLng: -63.34546,
+    arcAlt: 0.7,
+    color: '#68e2fa',
+},
+{
+    order: 6,
+    startLat: 37.5665,
+    startLng: 126.978,
+    endLat: 35.6762,
+    endLng: 139.6503,
+    arcAlt: 0.1,
+    color: '#68e2fa',
+},
+{
+    order: 6,
+    startLat: 22.3193,
+    startLng: 114.1694,
+    endLat: 51.5072,
+    endLng: -0.1276,
+    arcAlt: 0.3,
+    color: '#68e2fa',
+},
+{
+    order: 7,
+    startLat: -19.885592,
+    startLng: -43.951191,
+    endLat: -15.595412,
+    endLng: -56.05918,
+    arcAlt: 0.1,
+    color: '#68e2fa',
+},
+{
+    order: 7,
+    startLat: 48.8566,
+    startLng: -2.3522,
+    endLat: 52.52,
+    endLng: 13.405,
+    arcAlt: 0.1,
+    color: '#68e2fa',
+},
+{
+    order: 7,
+    startLat: 52.52,
+    startLng: 13.405,
+    endLat: 34.0522,
+    endLng: -118.2437,
+    arcAlt: 0.2,
+    color: '#68e2fa',
+},
+{
+    order: 8,
+    startLat: -8.833221,
+    startLng: 13.264837,
+    endLat: -33.936138,
+    endLng: 18.436529,
+    arcAlt: 0.2,
+    color: '#68e2fa',
+},
+{
+    order: 8,
+    startLat: 49.2827,
+    startLng: -123.1207,
+    endLat: 52.3676,
+    endLng: 4.9041,
+    arcAlt: 0.2,
+    color: '#68e2fa',
+},
+{
+    order: 8,
+    startLat: 1.3521,
+    startLng: 103.8198,
+    endLat: 40.7128,
+    endLng: -74.006,
+    arcAlt: 0.5,
+    color: '#68e2fa',
+},
+{
+    order: 9,
+    startLat: 51.5072,
+    startLng: -0.1276,
+    endLat: 34.0522,
+    endLng: -118.2437,
+    arcAlt: 0.2,
+    color: '#68e2fa',
+},
+{
+    order: 9,
+    startLat: 22.3193,
+    startLng: 114.1694,
+    endLat: -22.9068,
+    endLng: -43.1729,
+    arcAlt: 0.7,
+    color: '#68e2fa',
+},
+{
+    order: 9,
+    startLat: 1.3521,
+    startLng: 103.8198,
+    endLat: -34.6037,
+    endLng: -58.3816,
+    arcAlt: 0.5,
+    color: '#68e2fa',
+},
+{
+    order: 10,
+    startLat: -22.9068,
+    startLng: -43.1729,
+    endLat: 28.6139,
+    endLng: 77.209,
+    arcAlt: 0.7,
+    color: '#68e2fa',
+},
+{
+    order: 10,
+    startLat: 34.0522,
+    startLng: -118.2437,
+    endLat: 31.2304,
+    endLng: 121.4737,
+    arcAlt: 0.3,
+    color: '#68e2fa',
+},
+{
+    order: 10,
+    startLat: -6.2088,
+    startLng: 106.8456,
+    endLat: 52.3676,
+    endLng: 4.9041,
+    arcAlt: 0.3,
+    color: '#68e2fa',
+},
+{
+    order: 11,
+    startLat: 41.9028,
+    startLng: 12.4964,
+    endLat: 34.0522,
+    endLng: -118.2437,
+    arcAlt: 0.2,
+    color: '#68e2fa',
+},
+{
+    order: 11,
+    startLat: -6.2088,
+    startLng: 106.8456,
+    endLat: 31.2304,
+    endLng: 121.4737,
+    arcAlt: 0.2,
+    color: '#68e2fa',
+},
+{
+    order: 11,
+    startLat: 22.3193,
+    startLng: 114.1694,
+    endLat: 1.3521,
+    endLng: 103.8198,
+    arcAlt: 0.2,
+    color: '#68e2fa',
+},
+{
+    order: 12,
+    startLat: 34.0522,
+    startLng: -118.2437,
+    endLat: 37.7749,
+    endLng: -122.4194,
+    arcAlt: 0.1,
+    color: '#68e2fa',
+},
+{
+    order: 12,
+    startLat: 35.6762,
+    startLng: 139.6503,
+    endLat: 22.3193,
+    endLng: 114.1694,
+    arcAlt: 0.2,
+    color: '#68e2fa',
+},
+{
+    order: 12,
+    startLat: 22.3193,
+    startLng: 114.1694,
+    endLat: 34.0522,
+    endLng: -118.2437,
+    arcAlt: 0.3,
+    color: '#68e2fa',
+},
+{
+    order: 13,
+    startLat: 52.52,
+    startLng: 13.405,
+    endLat: 22.3193,
+    endLng: 114.1694,
+    arcAlt: 0.3,
+    color: '#68e2fa',
+},
+{
+    order: 13,
+    startLat: 11.986597,
+    startLng: 8.571831,
+    endLat: 35.6762,
+    endLng: 139.6503,
+    arcAlt: 0.3,
+    color: '#68e2fa',
+},
+{
+    order: 13,
+    startLat: -22.9068,
+    startLng: -43.1729,
+    endLat: -34.6037,
+    endLng: -58.3816,
+    arcAlt: 0.1,
+    color: '#68e2fa',
+},
+{
+    order: 14,
+    startLat: -33.936138,
+    startLng: 18.436529,
+    endLat: 21.395643,
+    endLng: 39.883798,
+    arcAlt: 0.3,
+    color: '#68e2fa',
+},
+];

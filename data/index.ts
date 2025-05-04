@@ -32,12 +32,13 @@ export const workExperience = [
         title: 'Artificial Intelligence Intern',
         company: "Seagate",
         points: [
-            "Developing an internal Python tool using Error Level Analysis, Hidden Markov Models and Metadata Extraction to detect marketing fraud via ensemble scoring approach, cutting down investigation time by 90%",
-            "Conducting research on leveraging AI capabilities, including anomaly detection and fraud analysis, to enhance remediation strategies and coverage effectiveness"  
+            "Developed an internal automated image forensic tool to detect manipulated images, incorporating trained Convolutional Neural Networks on ELA and PCA outputs, achieving 91% accuracy and an F1 score of 0.9, cutting down investigation time by 50%",
+            "Created agentic Retrieval-Augmented Generation LLM workflow proof of concept using Llama3, Langchain, Langraph, LlamaIndex to decrease hallucinations and improve context accuracy",
+            "Wrote a research paper on the best practices for combating AI-driven fraud, including C2PA and CAI implementation, IMDA AI Verify governance testing",
         ],
         contentStyle: { background: '#1f2937', color: '#fff' },
         contentArrowStyle: { borderRight: '7px solid  #232631' },
-        date: "May 2024 - Current",
+        date: "May 2024 - August 2024",
         iconStyle: { background: '#fff', color: '#6EBE49'},
         icon: seagateIcon
     },

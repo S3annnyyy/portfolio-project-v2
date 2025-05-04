@@ -79,7 +79,7 @@ const Hero = () => {
                         >
                             <ul className='block animate-text-slide text-left leading-tight [&_li]:block text-base md:text-4xl whitespace-nowrap font-extrabold'>
                                 <li>Singapore Management University</li>
-                                <li>Year 2 Information Systems</li>
+                                <li>Year 3 Information Systems</li>
                                 <li>Business Analytics</li>
                                 <li>Digital Cloud Solutions</li>
                                 <li>Avid programmer</li>
